@@ -2,6 +2,20 @@ const express = require('express');
 const routes = require('./routes');
 const sequelize = require('./config/connection');
 const app = express();
+const session = require('express-session');
+
+// Sessions configuration
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const sess = {
+  secret: 'Assembled coders secret!',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
+
 
 // HANDLEBARS
 const { engine } = require('express-handlebars'); // require the express-handlebars module
@@ -15,6 +29,9 @@ app.get('/', (req, res) => {
 })
 
 const PORT = process.env.PORT || 3001;
+
+// Session middleware
+app.use(session(sess));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
