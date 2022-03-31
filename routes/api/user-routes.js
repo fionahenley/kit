@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { User, Post, Like } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-
 // GET /api/users
 router.get('/', (req, res) => {
     // Access our User model and run .findAll() method)
@@ -50,7 +49,7 @@ router.get('/:id', (req, res) => {
 });
 
 // POST /api/users
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
 
     User.create({
         firstname: req.body.firstname,
