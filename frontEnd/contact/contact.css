@@ -1,0 +1,61 @@
+/* ------------------------------- BACKGROUND ------------------------------- */
+html {
+    background: url(../assets/images/clouds.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+/* ---------------------------------- FONT ---------------------------------- */
+  body {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+  }
+
+/* --------------------------------- HEADER --------------------------------- */
+header {
+  padding: 20px;
+}
+
+.navbar {
+  opacity: 0.3;
+  padding-top: 5px;
+  position: fixed;
+  top: 0;
+  right: 0
+}
+
+header nav {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+}
+
+header nav a {
+  color: rgb(75, 75, 75);
+}
+
+#inputContainer {
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  position: fixed;
+  top:0;
+}
+
+/* --------------------------------- FOOTER --------------------------------- */
+
+footer {
+  font-family: sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 15px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  color: rgb(75, 75, 75);
+}
+
