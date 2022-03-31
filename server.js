@@ -2,7 +2,20 @@ const express = require('express');
 const routes = require('./routes');
 const sequelize = require('./config/connection');
 const app = express();
+const path = require('path');
 const session = require('express-session');
+const exphbs = require('express-handlebars');
+
+const hbs = exphbs.create({});
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+
 // Sessions configuration
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sess = {
@@ -22,7 +35,7 @@ app.engine('handlebars', engine({
 }));
 app.use(express.static('public'));
 app.get('/', (req, res) => {
-  res.render('main',{layout: 'index'}); // Use the render method with two params, (main.handlebars, {layout: 'index'}) 1st - 'main' that points to the mainhandlebar file. 2nd - Object with layout property pointing to the index.handlebars file
+  res.render('main',{layout: 'index'}); // Use the render method with two params, (main.handlebars, {layout: 'index'}) 1st - 'main' that points to the mainhandlebar file (index.handlebars body). 2nd - Object with layout property pointing to the index.handlebars file
 })
 const PORT = process.env.PORT || 3001;
 // Session middleware

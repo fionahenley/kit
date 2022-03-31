@@ -25,27 +25,23 @@ User.init(
             autoIncrement: true
         },
         // define a name column
-            username: {
+
+        firstname: {
             type: DataTypes.STRING,
             allowNull: false
         },
-
-        // firstname: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false
-        // },
-        // lastname: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false
-        // },
-        // location: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false
-        // },
-        // bio: {
-        //     type: DataTypes.STRING,
-        //     allowNull: true
-        // },
+        lastname: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        location: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        bio: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
         // define an email column
         email: {
             type: DataTypes.STRING,
