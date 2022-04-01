@@ -43,7 +43,7 @@
         </div>
     </section> --}}
 
-    <form class="login-form">
+    {{!-- <form class="login-form">
   <div>
     <label for="email-login">email:</label>
     <input type="text" id="email-login" />
@@ -61,36 +61,59 @@
 
 <form class="signup-form">
   <div>
-    <label for="firstname-signup">First Name:</label>
-    <input type="text" id="firstname-signup" />
+    <input placeholder="First Name" type="text" id="firstname-signup" />
   </div>
   <div>
-    <label for="lastname-signup">Last Name:</label>
-    <input type="text" id="lastname-signup" />
+    <input placeholder="Last Name Name" type="text" id="lastname-signup" />
   </div>
 
   <div>
-    <label for="location-signup">Location:</label>
     <input type="text" id="location-signup" />
   </div>
 
   <div>
-    <label for="bio-signup">Bio:</label>
     <input type="text" id="bio-signup" />
   </div>
 
 
   <div>
-    <label for="email-signup">Email:</label>
     <input type="text" id="email-signup" />
   </div>
   <div>
-    <label for="password-signup">password:</label>
     <input type="password" id="password-signup" />
   </div>
   <div>
-    <button type="submit">signup</button>
-  </div>
+    <form action="https://www.google.com/">
+    <input type="submit" value="signup"/>
 </form>
+  </div>
+</form> --}}
+
+<form class="signup-form">
+<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+        
+        <form class="signup-form">
+			<div class="signup">
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" id="firstname-signup" name="txt" placeholder="First Name" required="">
+					<input type="text" id="lastname-signup" name="txt" placeholder="Last Name" required="">
+					<input type="text" id="location-signup" name="txt" placeholder="Location" required="">
+					<input type="text" id="bio-signup" name="txt" placeholder="Bio" required="">
+					<input type="email" id="email-signup" name="email" placeholder="Email" required="">
+					<input type="password" id="password-signup" name="pswd" placeholder="Password" required="">
+					<button type="submit" value="signup">Sign up</button>
+			</div>
+        </form>
+
+			<div class="login">
+				<form class="login-form">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<button type="submit">Login</button>
+				</form>
+			</div>
+	</div>
 
 <script src="/javascript/login.js"></script>
