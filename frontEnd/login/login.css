@@ -17,12 +17,8 @@ header {
   padding: 20px;
 }
 
-.navbar {
-  opacity: 0.3;
+.dropdown {
   padding-top: 5px;
-  position: fixed;
-  top: 0;
-  right: 0
 }
 
 header nav {
@@ -57,9 +53,9 @@ header nav a {
 
 .button {
   border: none;
-  opacity: 0.3;
-  background-color: #d4e9ff;
+  opacity: 0.5;
 }
+
 
 p .button {
   color: rgb(75, 75, 75);

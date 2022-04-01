@@ -18,20 +18,19 @@ header {
   padding: 20px;
 }
 
-.navbar {
-  opacity: 0.3;
-  padding-top: 5px;
-  position: fixed;
-  top: 0;
-  right: 0
-}
-
 header nav {
   padding-top: 15px;
   margin-right: 20px;
   float: right;
 }
 
+.button {
+  opacity: 0.5;
+}
+
+.dropdown {
+  padding-top: 5px;
+}
 
 header nav a {
   color: rgb(75, 75, 75);
@@ -41,11 +40,6 @@ header img {
   position: fixed;
   top:0;
 }
-
-.dropdown-content {
-  display: none;
-}
-
 
 /* ---------------------------------- ABOUT --------------------------------- */
 .aboutContent {
@@ -62,7 +56,6 @@ header img {
   flex-direction: column;
   float: right;
   margin-left: 100px;
-
 }
 
 h2 {
@@ -79,10 +72,7 @@ h2 {
   margin-top: 50px;
 }
 
-
-
 /* --------------------------------- FOOTER --------------------------------- */
-
 
  footer {
   font-family: sans-serif;

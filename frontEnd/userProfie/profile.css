@@ -23,38 +23,21 @@ header {
   font-size: 35px;
 }
 
-.navbar {
-  padding-top: 5px;
-  opacity: 0.3;
-  position: fixed;
-  top: 0;
-  right: 0;
-}
-
 header nav {
   padding-top: 15px;
   margin-right: 20px;
   float: right;
 }
 
-nav h1 {
-  justify-content: left;
+header nav a {
+  color: rgb(75, 75, 75);
 }
 
-header li {
-  list-style: none;
-  float: right;
+.dropdown {
+  padding-top: 5px;
+  opacity: 0.3;
 }
 
-header nav ul li {
-  display: inline-block;
-  margin-left: 25px;
-}
-
-header nav ul li a {
-  color: black;
-  font-weight: bold;
-}
 
 /* ---------------------------------- PROFILE INFORMATION ---------------------------------- */
 .infoContainer {
@@ -79,9 +62,6 @@ img {
   align-items: center;
 }
 
-.field {
-  opacity: 0.1;
-}
 
 li {
   padding-left: 50px;
@@ -97,10 +77,8 @@ li {
 /* ----------------------------------- BIO ---------------------------------- */
 
 .bioContent {
-  width: 600px;
-  margin-right: 230px;
-  margin-left: 50px;
-  margin-top: 50px;
+  width: 500px;
+  margin-right: 450px;
 }
 
 .bio {
@@ -115,13 +93,6 @@ li {
   justify-content: center;
   align-content: center;
 }
-
-/* .bioContainer {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding-right: 300px;
-} */
 
 /* ---------------------------------- POSTS --------------------------------- */
 .contentContainer {

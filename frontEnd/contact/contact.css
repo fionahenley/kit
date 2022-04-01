@@ -17,14 +17,6 @@ header {
   padding: 20px;
 }
 
-.navbar {
-  opacity: 0.3;
-  padding-top: 5px;
-  position: fixed;
-  top: 0;
-  right: 0
-}
-
 header nav {
   padding-top: 15px;
   margin-right: 20px;
@@ -33,6 +25,14 @@ header nav {
 
 header nav a {
   color: rgb(75, 75, 75);
+}
+
+button {
+   opacity: 0.5; 
+}
+
+.dropdown {
+  padding-top: 5px;
 }
 
 #inputContainer {
