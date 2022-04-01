@@ -28,6 +28,7 @@ const sess = {
     db: sequelize
   })
 };
+
 // HANDLEBARS
 const { engine } = require('express-handlebars'); // require the express-handlebars module
 app.set('view engine', 'handlebars');
@@ -39,6 +40,8 @@ app.get('/', (req, res) => {
   res.render('main',{layout: 'index'}); // Use the render method with two params, (main.handlebars, {layout: 'index'}) 1st - 'main' that points to the mainhandlebar file (index.handlebars body). 2nd - Object with layout property pointing to the index.handlebars file
 })
 const PORT = process.env.PORT || 3001;
+
+
 // Session middleware
 app.use(session(sess));
 app.use(express.json());

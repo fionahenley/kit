@@ -1,5 +1,5 @@
 
-<header>
+{{!-- <header>
     <nav class="navbar" role="navigation" aria-label="dropdown navigation">
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link pl-5 mr-5"></a>
@@ -13,9 +13,9 @@
         </div>
       </div>
     </nav>
-</header>
+</header> --}}
 <!-- -------------------- EMAIL & PASSWORD INPUT FIELD -------------------- -->
-  <main>
+  {{!-- <main>
     <section class="section">
       <container id="inputContainer">
         <div>
@@ -41,4 +41,56 @@
           <p class="control"><button class="button">Sign up</button></p>
       </div>
         </div>
-    </section>
+    </section> --}}
+
+    <form class="login-form">
+  <div>
+    <label for="email-login">email:</label>
+    <input type="text" id="email-login" />
+  </div>
+  <div>
+    <label for="password-login">password:</label>
+    <input type="password" id="password-login" />
+  </div>
+  <div>
+    <button type="submit">login</button>
+  </div>
+</form>
+
+<br><br><br>
+
+<form class="signup-form">
+  <div>
+    <label for="firstname-signup">First Name:</label>
+    <input type="text" id="firstname-signup" />
+  </div>
+  <div>
+    <label for="lastname-signup">Last Name:</label>
+    <input type="text" id="lastname-signup" />
+  </div>
+
+  <div>
+    <label for="location-signup">Location:</label>
+    <input type="text" id="location-signup" />
+  </div>
+
+  <div>
+    <label for="bio-signup">Bio:</label>
+    <input type="text" id="bio-signup" />
+  </div>
+
+
+  <div>
+    <label for="email-signup">Email:</label>
+    <input type="text" id="email-signup" />
+  </div>
+  <div>
+    <label for="password-signup">password:</label>
+    <input type="password" id="password-signup" />
+  </div>
+  <div>
+    <button type="submit">signup</button>
+  </div>
+</form>
+
+<script src="/javascript/login.js"></script>

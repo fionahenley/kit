@@ -50,7 +50,6 @@ router.get('/:id', (req, res) => {
 
 // POST /api/users
 router.post('/', (req, res) => {
-
     User.create({
         firstname: req.body.firstname,
         lastname: req.body.lastname,
@@ -62,7 +61,7 @@ router.post('/', (req, res) => {
     .then(dbUserData => {
         req.session.save(() => {
           req.session.user_id = dbUserData.id;
-          req.session.username = dbUserData.username;
+          req.session.firstname = dbUserData.firstname;
           req.session.loggedIn = true;
     
           res.json(dbUserData);
@@ -106,18 +105,6 @@ router.post('/logout', withAuth, (req, res) => {
         res.status(404).end();
     }
 })  
-
-// LOGOUT
-  router.post('/logout', (req, res) => {
-if (req.session.loggedIn) {
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
-  }
-  else {
-    res.status(404).end();
-  }
-});
 
 // PUT /api/users/1
 router.put('/:id', withAuth, (req, res) => {

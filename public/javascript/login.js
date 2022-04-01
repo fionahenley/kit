@@ -1,21 +1,59 @@
-function signupFormHandler(event) {
-    event.preventDefault();
-  
-    const username = document.querySelector('#username-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
-  
-    if (username && email && password) {
-      fetch('/api/users', {
-        method: 'post',
-        body: JSON.stringify({
-          username,
-          email,
-          password
-        }),
-        headers: { 'Content-Type': 'application/json' }
-      }).then((response) => {console.log(response)})
+async function loginFormHandler(event) {
+  event.preventDefault();
+
+  const email = document.querySelector('#email-login').value.trim();
+  const password = document.querySelector('#password-login').value.trim();
+
+  if (email && password) {
+    const response = await fetch('/api/users/login', {
+      method: 'post',
+      body: JSON.stringify({
+        email,
+        password
+      }),
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert(response.statusText);
     }
   }
+}
 
-  document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+async function signupFormHandler(event) {
+  event.preventDefault();
+
+  const firstname = document.querySelector('#firstname-signup').value.trim();
+  const lastname = document.querySelector('#lastname-signup').value.trim();
+  const location = document.querySelector('#location-signup').value.trim();
+  const bio = document.querySelector('#bio-signup').value.trim();
+  const email = document.querySelector('#email-signup').value.trim();
+  const password = document.querySelector('#password-signup').value.trim();
+
+  if (firstname && lastname && location && bio && email && password) {
+    const response = await fetch('/api/users', {
+      method: 'post',
+      body: JSON.stringify({
+        firstname,
+        lastname,
+        location,
+        bio,
+        email,
+        password
+      }),
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert(response.statusText);
+    }
+  }
+}
+
+document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+
+document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
