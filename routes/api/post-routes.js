@@ -1,6 +1,6 @@
 const sequelize = require('../../config/connection');
 const router = require('express').Router();
-const { Post, User, Like } = require('../../models');
+const { Post, User, Like, Comment    } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get all users
@@ -13,7 +13,22 @@ router.get('/', (req, res) => {
                 model: User,
                 attributes: ['firstname', 'lastname']
             }
-        ]
+        ],
+        include: [
+            // include the Comment model here:
+            {
+              model: Comment,
+              attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+              include: {
+                model: User,
+                attributes: ['firstname', 'lastname']
+              }
+            },
+            {
+              model: User,
+              attributes: ['firstname', 'lastname']
+            }
+          ]
     })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {
@@ -33,7 +48,22 @@ router.get('/:id', (req, res) => {
                 model: User,
                 attributes: ['firstname', 'lastname']
             }
-        ]
+        ],
+        include: [
+            // include the Comment model here:
+            {
+              model: Comment,
+              attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+              include: {
+                model: User,
+                attributes: ['firstname', 'lastname']
+              }
+            },
+            {
+              model: User,
+              attributes: ['firstname', 'lastname']
+            }
+          ]
     })
         .then(dbPostData => {
             if (!dbPostData) {
