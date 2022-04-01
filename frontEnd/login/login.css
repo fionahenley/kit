@@ -18,7 +18,7 @@ header {
 }
 
 .navbar {
-  opacity: 0.2;
+  opacity: 0.3;
   padding-top: 5px;
   position: fixed;
   top: 0;
@@ -31,21 +31,6 @@ header nav {
   float: right;
 }
 
-header li {
-  list-style: none;
-  float: right;
-}
-
-header nav ul li {
-  display: inline-block;
-  margin-left: 25px;
-}
-
-/* header nav ul li a {
-  color: black;
-  font-weight: bold;
-} */
-
 header nav a {
   color: rgb(75, 75, 75);
 }
@@ -55,15 +40,6 @@ header nav a {
   flex-direction: column;
   align-items: center;
 }
-/* 
-li {
-  list-style: none;
-}
-
-header nav ul li {
-  display: inline-block;
-  margin-left: 25px;
-} */
 
 /* --------------------------------- BUTTONS -------------------------------- */
 .btnContainer {
@@ -93,11 +69,6 @@ p .button:hover {
   color: black;
 }
 
-/* ---------------------------------- LOGO ---------------------------------- */
-
-/* img {
-  margin-left: 350px;
-} */
 
 /* --------------------------------- FOOTER --------------------------------- */
 

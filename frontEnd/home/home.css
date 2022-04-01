@@ -52,18 +52,18 @@ html {
     top:0;
   }
 
+
 /* ---------------------------------- POSTS --------------------------------- */
 .contentContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .postContainer {
   display: flex;
   flex-direction: column;
-  border: 0.5px solid black;
+  border: 0.5px solid white;
   width: 500px;
   padding-bottom: 5px;
   border-radius: 15px;
@@ -76,8 +76,71 @@ html {
 }
 
 .button {
-    background-color: rgb(75, 75, 75);
-    color:white;
+    border: none;
+    opacity: .5;
+}
+
+.button:hover {
+  background-color: #ccc;
+}
+
+ .postDateAndTime {
+  float: right;
+}
+
+
+
+/* -------------------------------- COMMENTS -------------------------------- */
+.collapsible {
+  cursor: pointer;
+  width: 30%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 12px;
+  color:black;
+}
+
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+.commentContainer {
+  border-bottom:0.5px solid black;
+  float: right;
+  border-radius: .25;
+}
+
+.comments {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-radius: 25px;
+}
+
+.commentsContainer {
+opacity: .5;
+}
+
+.collapsible:after {
+  content: '\02795'; 
+  font-size: 13px;
+  color: white;
+  /* padding-top: 3px;
+  padding-left: 3px;
+  padding-right: 3px; */
+}
+
+.active:after {
+  content: "\2796"; 
+  padding-top: 3px;
+}
+
+.commentDateAndTime {
+  display: flex;
+  flex-direction: row;
 }
 
 /* --------------------------------- FOOTER --------------------------------- */
