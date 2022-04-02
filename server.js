@@ -15,8 +15,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
 // Sessions configuration
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sess = {
@@ -36,9 +34,7 @@ app.engine('handlebars', engine({
   layoutsDir: `${__dirname}/views/layouts`
 }));
 app.use(express.static('public'));
-app.get('/', (req, res) => {
-  res.render('main',{layout: 'index'}); // Use the render method with two params, (main.handlebars, {layout: 'index'}) 1st - 'main' that points to the mainhandlebar file (index.handlebars body). 2nd - Object with layout property pointing to the index.handlebars file
-})
+require('./routes/index.js');
 const PORT = process.env.PORT || 3001;
 // Session middleware
 app.use(session(sess));
@@ -50,7 +46,6 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
-
 
 
 

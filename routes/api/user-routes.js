@@ -1,6 +1,8 @@
 const router = require('express').Router();
+const { stores } = require('sessions');
 const { User, Post, Like } = require('../../models');
 const withAuth = require('../../utils/auth');
+var sessionName = global.String;
 
 // GET /api/users
 router.get('/', (req, res) => {
@@ -79,7 +81,7 @@ router.post('/login', withAuth, (req, res) => {
         where: {
             email: req.body.email
         }
-    }).then(dbUserData => {
+    }).then(dbUserData => {        
         if (!dbUserData) {
             res.status(400).json({ message: 'No user with that email address!' });
             return;
@@ -89,9 +91,18 @@ router.post('/login', withAuth, (req, res) => {
         if (!validPassword) {
             res.status(400).json({ message: 'Incorrect password!' });
             return;
-        }
+        }       
 
-        res.json({ user: dbUserData, message: 'You are now logged in!' });
+        req.session.save(() => {
+            // declare session variables
+            req.session.user_id = dbUserData.id;
+            req.session.username = dbUserData.username;
+            req.session.loggedIn = true;
+            
+            res.json({ user: dbUserData, message: 'You are now logged in!' });
+        });
+
+        
     });
 });
 
