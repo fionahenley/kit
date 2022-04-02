@@ -67,6 +67,7 @@ router.post('/', (req, res) => {
           req.session.loggedIn = true;
     
           res.json(dbUserData);
+          console.log(dbUserData) 
         });
       })
       .catch(err => {
@@ -75,13 +76,16 @@ router.post('/', (req, res) => {
       });
 });
 
-router.post('/login', withAuth, (req, res) => {
+//not being hit at all 
+router.post('/login', (req, res) => {
     // expects {email: 'lernantino@gmail.com', password: 'password1234'}
+    console.log("user.findone")
     User.findOne({
         where: {
             email: req.body.email
         }
-    }).then(dbUserData => {        
+    }).then(dbUserData => { 
+        console.log(dbUserData)       
         if (!dbUserData) {
             res.status(400).json({ message: 'No user with that email address!' });
             return;
@@ -107,7 +111,7 @@ router.post('/login', withAuth, (req, res) => {
 });
 
 // Logout!
-router.post('/logout', withAuth, (req, res) => {
+router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();

@@ -6,18 +6,12 @@ body {
   background-size: cover;
 }
 
-/* NAVBAR */
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: rgb(143, 8, 8);
-    overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  
-  /* Change the color of links on hover */
-
   /* SIGNUP/LOGIN PAGE  */
+
+  h1 {
+    font-size: 50px;
+    color: #000;
+  }
 
   body{
     margin: 0;
@@ -93,13 +87,17 @@ body {
     transform: translateY(-30px);
     transition: .8s ease-in-out;
   }
+
   .login label{
     color: #573b8a;
     transform: scale(.6);
   }
+
+  #login-img {
+margin-left: 75px;  }
   
   #chk:checked ~ .login{
-    transform: translateY(-520px);
+    transform: translateY(-420px);
   }
   #chk:checked ~ .login label{
     transform: scale(1);	
