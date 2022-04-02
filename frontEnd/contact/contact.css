@@ -44,12 +44,39 @@ header img {
   position: fixed;
   top:0;
 }
+/* --------------------------------- CONTACT -------------------------------- */
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: right;
+  width: 500px;
+}
 
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.postContainer {
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid black;
+  width: 500px;
+  padding-bottom: 5px;
+  border-radius: 15px;
+  margin-top: 50px;
+}
 /* --------------------------------- FOOTER --------------------------------- */
 
 footer {
   font-family: sans-serif;
-  position: fixed;
+
   bottom: 0;
   left: 0;
   font-size: 15px;
@@ -59,3 +86,8 @@ footer {
   color: rgb(75, 75, 75);
 }
 
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}

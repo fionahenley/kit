@@ -32,6 +32,7 @@ header nav {
   float: right;
 }
 
+
 header nav a {
   color: rgb(75, 75, 75);
 }
@@ -39,6 +40,10 @@ header nav a {
 header img {
   position: fixed;
   top:0;
+}
+
+.dropdown-content {
+  display: none;
 }
 
 
@@ -78,13 +83,16 @@ h2 {
 
 /* --------------------------------- FOOTER --------------------------------- */
 
-footer {
-  position: fixed;  
-  margin-bottom: 0;
- }
- 
- h3 {
-   font-family: sans-serif;
-   font-size: 15px;
-   color:rgb(75, 75, 75);
- }
+
+ footer {
+  font-family: sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 15px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  color: rgb(75, 75, 75);
+}
+
