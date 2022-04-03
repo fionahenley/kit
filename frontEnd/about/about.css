@@ -18,71 +18,59 @@ header {
   padding: 20px;
 }
 
-.navbar {
-  opacity: 0.3;
-  padding-top: 5px;
-  position: fixed;
-  top: 0;
-  right: 0
+.dropdown {
+  opacity: .5;
+  margin: 0;
 }
 
 header nav {
-  padding-top: 15px;
+  position: fixed;
   margin-right: 20px;
-  float: right;
+  right: 0;
+  top:20px;
 }
-
 
 header nav a {
   color: rgb(75, 75, 75);
-}
+} 
 
+.navButton {
+ margin: 0;
+ opacity: .5;
+}
+/* ---------------------------------- LOGO ---------------------------------- */
 header img {
   position: fixed;
-  top:0;
+  top: 0;
+  left: 20px;
 }
-
-.dropdown-content {
-  display: none;
-}
-
 
 /* ---------------------------------- ABOUT --------------------------------- */
 .aboutContent {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  float: right;
-  margin-right: 300px;
-  width: 500px;
+  justify-content: center;
 }
 
 .aboutContainer {
-  display: flex;
-  flex-direction: column;
-  float: right;
-  margin-left: 100px;
+ align-items: center;
+ display:flex;
+ flex-flow: row wrap;
+ justify-content: space-around;
 
+}
+
+.aboutText {
+  width: 500px;
+  padding-left: 25px;
 }
 
 h2 {
   font-weight: bold;
 }
 
-.postContainer {
-  display: flex;
-  flex-direction: column;
-  border: 0.5px solid black;
-  width: 500px;
-  padding-bottom: 5px;
-  border-radius: 15px;
-  margin-top: 50px;
-}
-
-
-
 /* --------------------------------- FOOTER --------------------------------- */
-
 
  footer {
   font-family: sans-serif;

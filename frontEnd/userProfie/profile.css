@@ -23,43 +23,28 @@ header {
   font-size: 35px;
 }
 
-.navbar {
-  padding-top: 5px;
-  opacity: 0.3;
-  position: fixed;
-  top: 0;
-  right: 0;
-}
 
 header nav {
-  padding-top: 15px;
+  position: fixed;
   margin-right: 20px;
-  float: right;
+  right: 0;
+  top:20px;
 }
 
-nav h1 {
-  justify-content: left;
+header nav a {
+  color: rgb(75, 75, 75);
 }
 
-header li {
-  list-style: none;
-  float: right;
+.dropdown {
+  margin:0;
+  opacity: 0.5;
 }
 
-header nav ul li {
-  display: inline-block;
-  margin-left: 25px;
-}
-
-header nav ul li a {
-  color: black;
-  font-weight: bold;
-}
+.navButton {
+  margin: 0;
+ }
 
 /* ---------------------------------- PROFILE INFORMATION ---------------------------------- */
-.infoContainer {
-  margin-left: 20px;
-}
 
 .title {
   color: rgb(75, 75, 75);
@@ -69,23 +54,22 @@ header nav ul li a {
 
 img {
   margin-left: 75px;
+  padding-top: 20px;
 }
 
 .imgContainer {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  justify-content: space-after;
-  align-items: center;
+  max-width: 25%;
 }
 
-.field {
-  opacity: 0.1;
+.infoContainer {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+max-width: 500px;
 }
 
 li {
   padding-left: 50px;
-  padding-top: 10px;
 }
 
 .info a {
@@ -93,41 +77,30 @@ li {
   font-size: 15px;
 }
 
-
 /* ----------------------------------- BIO ---------------------------------- */
 
 .bioContent {
-  width: 600px;
-  margin-right: 230px;
-  margin-left: 50px;
-  margin-top: 50px;
+  width: 275px;
+  padding-top: 50px;
+  padding-left: 25px;
 }
 
 .bio {
   font-size: 20px;
   font-weight: bold;
-}
-
-.bioConent {
-  display: flex;
-  flex-basis: 70%;
+  display:flex;
   flex-direction: row;
-  justify-content: center;
-  align-content: center;
+  float: left;
 }
-
-/* .bioContainer {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding-right: 300px;
-} */
 
 /* ---------------------------------- POSTS --------------------------------- */
+
 .contentContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding-bottom: 100px;
+  max-width: 500px;
+  padding-left: 100px;
 }
 
 .postContainer {
@@ -137,7 +110,6 @@ li {
   width: 500px;
   padding-bottom: 5px;
   border-radius: 15px;
-  margin-top: 50px;
 }
 
 .btnContainer {
@@ -156,6 +128,8 @@ li {
 
 .postDateAndTime {
   float: right;
+  font-family: sans-serif;
+  color: white;
 }
 
 /* -------------------------------- COMMENTS -------------------------------- */

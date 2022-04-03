@@ -6,72 +6,158 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
-
+/* -------------------------------- FONT/BODY ------------------------------- */
 body {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
 }
-
-/* --------------------------------- HEADER --------------------------------- */
-header {
-  padding: 20px;
+/* --------------------------------- HEADER/NAV --------------------------------- */
+ header {
+  padding: 30px;
 }
 
-.navbar {
-  opacity: 0.3;
-  padding-top: 5px;
-  position: fixed;
-  top: 0;
-  right: 0
+.dropdown {
+  opacity: .5;
+  margin: 0;
 }
 
 header nav {
-  padding-top: 15px;
+  position: fixed;
   margin-right: 20px;
-  float: right;
+  right: 0;
+  top:20px;
 }
 
 header nav a {
   color: rgb(75, 75, 75);
-}
+} 
 
-#inputContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* --------------------------------- BUTTONS -------------------------------- */
-.btnContainer {
-  display: flex;
-  justify-content: center;
-}
-
-.vertical-center {
+.navButton {
+  opacity: .5;
   margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  padding:18px;
+}
+/* ---------------------------------- LOGO ---------------------------------- */
+header img {
+  position: fixed;
+  top: 0;
+  left: 20px;
+}
+/* ----------------------- SIGN UP/ SIGN IN CONTAINER ----------------------- */
+.container {  
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ margin-top: 50px;
 }
 
-.button {
+.main {
+  width: 350px;
+  height: 550px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 0.5px solid white;
+  margin-top: 0;
+}
+
+#chk {
+  display: none;
+}
+
+button {
+  width: 60%;
+  height: 35px;
+  margin: 10px auto;
+  justify-content: center;
+  display: block;
+  color: white;
+  background:#7258BF;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
   border: none;
-  opacity: 0.3;
-  background-color: #d4e9ff;
-}
-
-p .button {
-  color: rgb(75, 75, 75);
-}
-
-p .button:hover {
-  color: black;
+  border-radius: 5px;
+  transition: .2s ease-in;
+  cursor: pointer;
 }
 
 
+button:hover {
+  background: white;
+  color: #7258BF;
+  opacity: .5;
+}
+
+input {
+  width: 60%;
+  height: 20px;
+  background: #ffff;
+  opacity: .6;
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 15px 10px 15px 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+/* --------------------------------- SIGN UP -------------------------------- */
+.signupText {
+  margin-bottom: 15px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.signup {
+  position: relative;
+  width:100%;
+  height: 100%;
+}
+
+label {
+  color:#7258BF;
+  font-size: 30px;
+  justify-content: center;
+  display: flex;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+.signupButton {
+  margin-bottom: 60px;
+}
+/* --------------------------------- SIGN IN -------------------------------- */
+.signinText {
+  font-size: 45px;
+}
+
+.login {
+  height: 600px;
+  background:#D7E4FD;
+  border-radius: 20px;
+  transform: translateY(-30px);
+  transition: .8s ease-in-out;
+}
+
+.login label {
+  color: #7258BF;
+  transform: scale(.6);
+}
+
+#chk:checked ~ .login {
+  transform: translateY(-420px);
+}
+
+#chk:checked ~ .login label {
+  padding-top: 10px;
+}
+
+#chk:checked ~ .signup label {
+  transform: scale(.6);
+}
 /* --------------------------------- FOOTER --------------------------------- */
-
 footer {
   font-family: sans-serif;
   position: fixed;
