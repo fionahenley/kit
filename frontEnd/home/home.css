@@ -1,45 +1,53 @@
 /* ------------------------------- BACKGROUND ------------------------------- */
 html {
-    background: url(../assets/images/clouds.jpeg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  /* ---------------------------------- FONT ---------------------------------- */
-  body {
-    font-family: "Raleway", sans-serif;
-    font-weight: bold;
-    line-height: 2.0;
-  }
-  
-  /* --------------------------------- HEADER --------------------------------- */
-  header {
-    padding: 20px;
-  }
-  
-  .dropdown {
-    padding-top: 5px;
-    top: 0;
-    right: 0;
-  }
-  
-  header nav {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-  }
+  background: url(../assets/images/clouds.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* ---------------------------------- FONT ---------------------------------- */
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  line-height: 2;
+}
 
-  header img {
-    position: fixed;
-    top:0;
-  }
-  
+/* --------------------------------- HEADER --------------------------------- */
+header {
+  padding: 50px;
+}
+
+.dropdown {
+  opacity: 0.5;
+  margin: 0;
+}
+
+header nav {
+  position: fixed;
+  margin-right: 20px;
+  right: 0;
+  top: 20px;
+}
+
+header nav a {
+  color: rgb(75, 75, 75);
+}
+
+.navButton {
+  margin: 0;
+}
+/* ---------------------------------- LOGO ---------------------------------- */
+header img {
+  position: fixed;
+  top: 0;
+  left: 20px;
+}
 /* ---------------------------------- POSTS --------------------------------- */
 .contentContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .postContainer {
@@ -53,24 +61,24 @@ html {
 }
 
 .btnContainer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .button {
-    border: none;
-    opacity: .5;
+  border: none;
+  opacity: 0.5;
 }
 
 .button:hover {
   background-color: #ccc;
 }
 
- .postDateAndTime {
+.postDateAndTime {
   float: right;
+  font-family: sans-serif;
+  color: white;
 }
-
-
 
 /* -------------------------------- COMMENTS -------------------------------- */
 .collapsible {
@@ -80,17 +88,18 @@ html {
   text-align: left;
   outline: none;
   font-size: 12px;
-  color:black;
+  color: black;
 }
 
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
   background-color: #ccc;
 }
 
 .commentContainer {
-  border-bottom:0.5px solid black;
+  border-bottom: 0.5px solid black;
   float: right;
-  border-radius: .25;
+  border-radius: 0.25;
 }
 
 .comments {
@@ -103,20 +112,17 @@ html {
 }
 
 .commentsContainer {
-opacity: .5;
+  opacity: 0.5;
 }
 
 .collapsible:after {
-  content: '\02795'; 
+  content: "\02795";
   font-size: 13px;
   color: white;
-  /* padding-top: 3px;
-  padding-left: 3px;
-  padding-right: 3px; */
 }
 
 .active:after {
-  content: "\2796"; 
+  content: "\2796";
   padding-top: 3px;
 }
 
@@ -128,13 +134,12 @@ opacity: .5;
 /* --------------------------------- FOOTER --------------------------------- */
 
 footer {
- margin-top: 50px;   
- margin-bottom: 0;
+  margin-top: 50px;
+  margin-bottom: 0;
 }
 
 h3 {
   font-family: sans-serif;
   font-size: 15px;
-  color:rgb(75, 75, 75);
+  color: rgb(75, 75, 75);
 }
-  
