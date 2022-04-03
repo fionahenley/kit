@@ -93,12 +93,14 @@ router.post('/login', (req, res) => {
     }).then(dbUserData => { 
         console.log(dbUserData)       
         if (!dbUserData) {
+            res.statusMessage = 'No user with that email address!';
             res.status(400).json({ message: 'No user with that email address!' });
             return;
         }
 
         const validPassword = dbUserData.checkPassword(req.body.password);
         if (!validPassword) {
+            res.statusMessage = 'Incorrect password!';
             res.status(400).json({ message: 'Incorrect password!' });
             return;
         }       
@@ -137,7 +139,8 @@ router.put('/:id', withAuth, (req, res) => {
     })
         .then(dbUserData => {
             if (!dbUserData[0]) {
-                res.status(404).json({ message: 'No user found with this id' });
+                res.statusMessage
+                res.status(404).end;
                 return;
             }
             res.json(dbUserData);

@@ -1,19 +1,15 @@
-const withAuth =  require('../utils/auth')
+const withAuth = require('../utils/auth')
 const router = require('express').Router();
 
-
 router.get('/', withAuth, (req, res) => {
-
-  res.render('home',{ loggedIn: req.session.loggedIn}); 
+    console.log(req.session);
+    res.render('home',{layout: 'main'});
 });
-
-router.get('/new', withAuth, (req, res) => {
+router.get('/home', withAuth, (req, res) => {
   console.log(req.session)
-  res.render('newPost',{ loggedIn: req.session.loggedIn}); 
+  res.render('home',{layout: 'main'});
 });
-
 router.get('/login', (req, res) => {
-  res.render('login'); 
+  res.render('login',{layout: 'main'});
 });
-
 module.exports = router;
