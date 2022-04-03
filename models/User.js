@@ -25,6 +25,7 @@ User.init(
             autoIncrement: true
         },
         // define a name column
+
         firstname: {
             type: DataTypes.STRING,
             allowNull: false
