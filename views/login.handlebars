@@ -1,0 +1,125 @@
+
+{{!-- <header>
+    <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link pl-5 mr-5"></a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="../about/about.html">
+            ABOUT
+          </a>
+          <a class="navbar-item" href="../contact/contact.html">
+              CONTACT
+            </a>
+        </div>
+      </div>
+    </nav>
+</header> --}}
+<!-- -------------------- EMAIL & PASSWORD INPUT FIELD -------------------- -->
+  {{!-- <main>
+    <section class="section">
+      <container id="inputContainer">
+        <div>
+          <img src="/assets/images/logo6.png" height="250px" width="250px" alt="logo">
+        </div>
+        <div class="field">
+          <p class="control has-icons-left has-icons-right">
+            <input class="input" type="email" style="width: 270px" placeholder="Email">
+            <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+            <span class="icon is-small is-right"><i class="fas fa-check"></i></span>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control has-icons-left">
+            <input class="input" type="password" style="width: 270px" placeholder="Password">
+            <span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
+          </p>
+      </container>
+        <!-- ------------------- LOGIN - SIGN UP - BUTTONS ------------------- -->
+        <div class="btnContainer">
+         <div class="field is-grouped pt-5">
+          <p class="control"><button class="button">Login</button></p>
+          <p class="control"><button class="button">Sign up</button></p>
+      </div>
+        </div>
+    </section> --}}
+
+{{!-- <form class="login-form">
+  <div>
+    <label for="email-login">email:</label>
+    <input type="text" id="email-login" />
+  </div>
+  <div>
+    <label for="password-login">password:</label>
+    <input type="password" id="password-login" />
+  </div>
+  <div>
+    <button id="submitLogin" type="submit">login</button>
+  </div>
+</form>
+
+<br><br><br>
+
+<form class="signup-form">
+  <div>
+    <input placeholder="First Name" type="text" id="firstname-signup" />
+  </div>
+  <div>
+    <input placeholder="Last Name Name" type="text" id="lastname-signup" />
+  </div>
+
+  <div>
+    <input type="text" id="location-signup" />
+  </div>
+
+  <div>
+    <input type="text" id="bio-signup" />
+  </div>
+
+
+  <div>
+    <input type="text" id="email-signup" />
+  </div>
+  <div>
+    <input type="password" id="password-signup" />
+  </div>
+  <div>
+    <button type="submit" value="signup">Sign up</button>
+  </div>
+</form> --}}
+
+<div class="loginContainer">
+<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+        
+      <form class="signup-form">
+        <div class="signup">
+            <label for="chk" aria-hidden="true">Sign up</label>
+            <input type="text" id="firstname-signup" name="txt" placeholder="First Name" required="">
+            <input type="text" id="lastname-signup" name="txt" placeholder="Last Name" required="">
+            <input type="text" id="location-signup" name="txt" placeholder="Location" required="">
+            <input type="text" id="bio-signup" name="txt" placeholder="Bio" required="">
+            <input type="email" id="email-signup" name="email" placeholder="Email" required="">
+            <input type="password" id="password-signup" name="pswd" placeholder="Password" required="">
+            <button type="submit" value="signup">Sign up</button>
+        </div>
+      </form>
+
+			<div class="login">
+				<form class="login-form">
+					<div>
+            <label for="chk" aria-hidden="true">Login</label>
+            <input id="email-login" type="email" name="email" placeholder="Email" required="">
+          </div>
+          <div>
+            <input id="password-login" type="password" name="pswd" placeholder="Password" required="">
+          </div>
+          <div>
+            <button id="submitLogin" type="submit">Login</button>
+            <img id="login-img" src="/assets/images/logo6.png" height="200px" width="200px" alt="logo">
+
+          </div>
+				</form>
+			</div>
+	</div>
+</div>
+        <script src="/javascript/login.js"></script>

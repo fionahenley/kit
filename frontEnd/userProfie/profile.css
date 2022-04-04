@@ -11,7 +11,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   color: rgb(75, 75, 75);
-  line-height: 2.0;
+  line-height: 2;
 }
 
 /* --------------------------------- HEADER --------------------------------- */
@@ -19,143 +19,180 @@ header {
   padding: 20px;
 }
 
-header h1 {
-  font-size: 30px;
-  padding-top: 10px;
-  display: inline-block;
+.title {
+  font-size: 35px;
 }
 
-.navbar {
-  padding-top: 5px;
-  opacity: 0.3;
-  position: fixed;
-  top: 0;
-  right: 0
-}
 
 header nav {
-  padding-top: 15px;
+  position: fixed;
   margin-right: 20px;
-  float: right;
+  right: 0;
+  top:20px;
 }
 
-nav h1 {
-  justify-content: left;
+header nav a {
+  color: rgb(75, 75, 75);
 }
 
-header li {
-  list-style: none;
-  float: right;
+.dropdown {
+  margin:0;
+  opacity: 0.5;
 }
 
-header nav ul li {
-  display: inline-block;
-  margin-left: 25px;
-}
-
-header nav ul li a {
-  color: black;
-  font-weight: bold;
-}
+.navButton {
+  margin: 0;
+ }
 
 /* ---------------------------------- PROFILE INFORMATION ---------------------------------- */
-.infoContainer {
-  margin-left: 20px;
-}
 
 .title {
-  color:rgb(75, 75, 75);
+  color: rgb(75, 75, 75);
   padding-left: 25px;
   padding-top: 20px;
 }
 
 img {
   margin-left: 75px;
+  padding-top: 20px;
 }
 
-/* imgContainer {
-  position:fixed;
-} */
+.imgContainer {
+  max-width: 25%;
+}
 
-.field {
-  opacity: 0.1;
+.infoContainer {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+max-width: 500px;
 }
 
 li {
   padding-left: 50px;
-  padding-top: 10px;
 }
 
 .info a {
-    color:rgb(75, 75, 75);
+  color: rgb(75, 75, 75);
   font-size: 15px;
 }
 
 /* ----------------------------------- BIO ---------------------------------- */
+
 .bioContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    float: right;
-    margin-right: 300px;
-    width: 500px;
+  width: 275px;
+  padding-top: 50px;
+  padding-left: 25px;
 }
 
-h2 {
-font-size: 20px;
-font-weight: bold;
+.bio {
+  font-size: 20px;
+  font-weight: bold;
+  display:flex;
+  flex-direction: row;
+  float: left;
 }
 
 /* ---------------------------------- POSTS --------------------------------- */
-.contentContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 100px;
 
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  max-width: 500px;
+  padding-left: 100px;
 }
 
 .postContainer {
   display: flex;
   flex-direction: column;
-  border: 0.5px solid black;
+  border: 0.5px solid white;
   width: 500px;
   padding-bottom: 5px;
   border-radius: 15px;
-  margin-top: 50px;
 }
 
 .btnContainer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .button {
-    background-color: rgb(75, 75, 75);
-    color:white;
+  border: none;
+  opacity: 0.5;
+}
+
+.button:hover {
+  background-color: #ccc;
+}
+
+.postDateAndTime {
+  float: right;
+  font-family: sans-serif;
+  color: white;
+}
+
+/* -------------------------------- COMMENTS -------------------------------- */
+.collapsible {
+  cursor: pointer;
+  width: 30%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 12px;
+  color: black;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #ccc;
+}
+
+.commentContainer {
+  border-bottom: 0.5px solid black;
+  float: right;
+  border-radius: 0.25;
+}
+
+.comments {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-radius: 25px;
+}
+
+.commentsContainer {
+  opacity: 0.5;
+}
+
+.collapsible:after {
+  content: "\02795";
+  font-size: 13px;
+  color: white;
+}
+
+.active:after {
+  content: "\2796";
+  padding-top: 3px;
+}
+
+.commentDateAndTime {
+  display: flex;
+  flex-direction: row;
 }
 
 /* --------------------------------- FOOTER --------------------------------- */
 
 footer {
- margin-top: 50px;   
- margin-bottom: 0;
+  margin-top: 50px;
+  margin-bottom: 0;
 }
 
 h3 {
   font-family: sans-serif;
   font-size: 15px;
-  color:rgb(75, 75, 75);
+  color: rgb(75, 75, 75);
 }
 
-/* footer {
-  font-family: sans-serif;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  font-size: 15px;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
-  color: rgb(49, 49, 49);
-} */
