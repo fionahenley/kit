@@ -13,16 +13,17 @@
     <title>Contact</title>
 </head>
 <body>
-  <!-- ------------------------------- HEADER -------------------------------- -->
-  <div class="wrapper">
+  <!-- ------------------------------- HEADER/NAV -------------------------------- -->
    <header>
     <div class="aboutContent">
-      <h1 class="title is-size-3">Contact</h1>
+      <h1 class="is-size-3">Contact</h1>
     </div>
     <div>
-      <img src="../assets/images/logoBlack.png" height="100px" width="100px" alt="kit_logo">
+      <!-- -------------------------------- LOGO --------------------------------- -->
+      <img src="../assets/images/kitLogo.png" height="100px" width="100px" alt="kit_logo">
     </div>
     <nav>
+      <!-- ---------------------------- DROPDOWN MENU ---------------------------- --> 
     <div class="dropdown is-right is-hoverable">
       <div class="dropdown-trigger">
         <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
@@ -34,13 +35,16 @@
       <div class="dropdown-menu" id="dropdown-menu4" role="menu">
         <div class="dropdown-content">
           <div class="dropdown-item">
-            <a class="navbar-item" href="../home/home.html">HOME</a>
+            <input type="text" placeholder="Search" class="searchBar">
+        </div>
+          <div class="dropdown-item">
+            <a class="navbar-item" href="../home/home.html">Home</a>
           </div>
           <div class="dropdown-item">
-            <a class="navbar-item" href="../userProfie/profile.html">MY PROFILE</a>
+            <a class="navbar-item" href="../userProfie/profile.html">My Profile</a>
           </div>
           <div class="dropdown-item">
-            <a class="navbar-item" href="../about/about.html">ABOUT</a>
+            <a class="navbar-item" href="../about/about.html">About</a>
           </div>
         </div>
       </div>
@@ -120,8 +124,5 @@
       &copy;KIT 2022 
     </h3>  
   </footer>
-  </div>
-
-  
 </body>
 </html>

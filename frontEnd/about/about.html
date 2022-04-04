@@ -13,16 +13,17 @@
     <title>About</title>
 </head>
 <body>
-
 <!-- ------------------------------- HEADER/NAV -------------------------------- -->
 <header>
-  <div class="aboutContent pt-5">
-    <h1 class="title is-size-3">About</h1>
+  <div class="aboutContent">
+    <h1 class="is-size-3">About</h1>
     </div>
+    <!-- -------------------------------- LOGO --------------------------------- -->
   <div>
-    <img src="../assets/images/logoBlack.png" height="100px" width="100px" alt="kit_logo">
+    <img src="../assets/images/kitLogo.png" height="100px" width="100px" alt="kit_logo">
   </div>
   <nav role="navigation" aria-label="main navigation">
+   <!-- ---------------------------- DROPDOWN MENU ---------------------------- -->
     <div class="dropdown is-right is-hoverable">
       <div class="dropdown-trigger">
         <button class="button navButton" aria-haspopup="true" aria-controls="dropdown-menu4">
@@ -31,16 +32,19 @@
           </span>
         </button>
       </div>
-      <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-menu" id="dropdown-menu" role="menu">
         <div class="dropdown-content">
           <div class="dropdown-item">
-            <a class="navbar-item" href="../home/home.html">HOME</a>
+              <input type="text" placeholder="Search" class="searchBar">
           </div>
           <div class="dropdown-item">
-            <a class="navbar-item" href="../userProfie/profile.html">MY PROFILE</a>
+            <a class="navbar-item" href="../home/home.html">Home</a>
           </div>
           <div class="dropdown-item">
-            <a class="navbar-item" href="../contact/contact.html">CONTACT</a>
+            <a class="navbar-item" href="../userProfie/profile.html">My Profile</a>
+          </div>
+          <div class="dropdown-item">
+            <a class="navbar-item" href="../contact/contact.html">Contact</a>
           </div>
         </div>
       </div>
@@ -54,7 +58,6 @@
   </div>
 </div>
 </container>
-
   <!-- ------------------------------- FOOTER -------------------------------- --> 
  <footer> 
     <h3 class="has-text-centered">

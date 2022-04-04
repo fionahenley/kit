@@ -8,12 +8,11 @@ html {
 }
 /* -------------------------------- FONT/BODY ------------------------------- */
 body {
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-/* --------------------------------- HEADER/NAV --------------------------------- */
+/* --------------------------------- HEADER/NAV/DROPDOWN MENU --------------------------------- */
  header {
-  padding: 30px;
+  padding: 50px;
 }
 
 .dropdown {
@@ -23,13 +22,13 @@ body {
 
 header nav {
   position: fixed;
-  margin-right: 20px;
+  margin-right: 40px;
   right: 0;
   top:20px;
 }
 
 header nav a {
-  color: rgb(75, 75, 75);
+  color: black;
 } 
 
 .navButton {
@@ -37,11 +36,15 @@ header nav a {
   margin: 0;
   padding:18px;
 }
+
+.is-hoverable .navbar-item:hover {
+  color: #7258BF;
+}
 /* ---------------------------------- LOGO ---------------------------------- */
 header img {
-  position: fixed;
-  top: 0;
-  left: 20px;
+  position: absolute;
+  top: 20px;
+  left: 40px;
 }
 /* ----------------------- SIGN UP/ SIGN IN CONTAINER ----------------------- */
 .container {  
@@ -49,7 +52,7 @@ header img {
  flex-direction: row;
  align-items: center;
  justify-content: center;
- margin-top: 50px;
+ margin-top: 0px;
 }
 
 .main {
@@ -57,7 +60,7 @@ header img {
   height: 550px;
   overflow: hidden;
   border-radius: 10px;
-  border: 0.5px solid white;
+  background-color: #FFF9F9;
   margin-top: 0;
 }
 
@@ -65,41 +68,15 @@ header img {
   display: none;
 }
 
-button {
-  width: 60%;
-  height: 35px;
-  margin: 10px auto;
-  justify-content: center;
-  display: block;
-  color: white;
-  background:#7258BF;
-  font-size: 1em;
-  font-weight: bold;
-  margin-top: 20px;
-  border: none;
-  border-radius: 5px;
-  transition: .2s ease-in;
-  cursor: pointer;
-}
-
-
-button:hover {
-  background: white;
-  color: #7258BF;
-  opacity: .5;
-}
-
 input {
   width: 60%;
   height: 20px;
-  background: #ffff;
-  opacity: .6;
+  background: #FFF9F9;
   justify-content: center;
   display: flex;
   margin: 20px auto;
   padding: 15px 10px 15px 10px;
-  border: none;
-  outline: none;
+  border: 0.5px solid #7258BF;
   border-radius: 5px;
 }
 /* --------------------------------- SIGN UP -------------------------------- */
@@ -113,6 +90,7 @@ input {
   position: relative;
   width:100%;
   height: 100%;
+  margin-bottom: 50px;
 }
 
 label {
@@ -126,7 +104,24 @@ label {
 }
 
 .signupButton {
-  margin-bottom: 60px;
+  margin: 10px auto;
+  width: 60%;
+  height: 35px;
+  justify-content: center;
+  display: block;
+  background: #FFF9F9;
+  color:#7258BF;
+  border: 0.5px solid #7258BF;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: .2s ease-in;
+  cursor: pointer;
+}
+
+.signupButton:hover {
+  background: #7258BF;
+  color: #FFF9F9;
 }
 /* --------------------------------- SIGN IN -------------------------------- */
 .signinText {
@@ -135,14 +130,14 @@ label {
 
 .login {
   height: 600px;
-  background:#D7E4FD;
+  background: #7258BF;
   border-radius: 20px;
   transform: translateY(-30px);
   transition: .8s ease-in-out;
 }
 
 .login label {
-  color: #7258BF;
+  color: #FFF9F9;
   transform: scale(.6);
 }
 
@@ -157,10 +152,31 @@ label {
 #chk:checked ~ .signup label {
   transform: scale(.6);
 }
+
+.loginButton {
+  width: 60%;
+  height: 35px;
+  margin: 10px auto;
+  display: block;
+  background: #FFF9F9;
+  color:#7258BF;
+  border: 0.5px solid #7258BF;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: .2s ease-in;
+  cursor: pointer;
+}
+
+.loginButton:hover {
+  border: 0.5px solid #FFF9F9;
+  background:#7258BF;
+  color:#FFF9F9;
+}
 /* --------------------------------- FOOTER --------------------------------- */
 footer {
-  font-family: sans-serif;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   font-size: 15px;
