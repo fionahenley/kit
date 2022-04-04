@@ -1,5 +1,5 @@
 const express = require('express');
-const routes = require('./routes');
+const routes = require('./controller');
 const sequelize = require('./config/connection');
 const app = express();
 const path = require('path');
@@ -34,7 +34,7 @@ app.engine('handlebars', engine({
   layoutsDir: `${__dirname}/views/layouts`
 }));
 app.use(express.static('public'));
-require('./routes/index.js');
+require('./controller/index.js');
 const PORT = process.env.PORT || 3001;
 // Session middleware
 app.use(session(sess));
