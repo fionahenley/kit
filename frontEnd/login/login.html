@@ -13,63 +13,82 @@
     <title>Login</title>
 </head>
 <body>
-  <!-- ------------------------------- HEADER -------------------------------- -->
+  <!-- ------------------------------- HEADER/NAV -------------------------------- -->
  <header>
-<!-- <nav class="navbar">
-<div class="dropdown is-right is-hoverable">
-  <div class="dropdown-trigger">
-    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-      <span class="icon is-small">
-        <i class="fas fa-angle-down" aria-hidden="true"></i>
-      </span>
-    </button>
+  <div>
+   <!-- -------------------------------- LOGO --------------------------------- -->
+    <img src="../assets/images/kitLogo.png" height="100px" width="100px" alt="kit_logo">
   </div>
-  <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-    <div class="dropdown-content">
-      <div class="dropdown-item">
-        <a class="dropdown-item" href="../about/about.html">
-          ABOUT
-        </a>
+  <nav role="navigation" aria-label="main navigation">
+      <!-- ---------------------------- DROPDOWN MENU ---------------------------- --> 
+    <div class="dropdown is-right is-hoverable">
+      <div class="dropdown-trigger">
+        <button class="button navButton" aria-haspopup="true" aria-controls="dropdown-menu4">
+          <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
       </div>
-      <div class="dropdown-item">
-        <a class="dropdown-item" href="../contact/contact.html">
-          CONTACT
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-</nav> -->
-</header> 
-<!-- -------------------- EMAIL & PASSWORD INPUT FIELD -------------------- -->
-  <main>
-    <section class="section">
-      <container id="inputContainer">
-        <div>
-          <img src="../assets/images/logo6.png" height="250px" width="250px" alt="kit_logo">
-        </div>
-        <div class="field">
-          <p class="control has-icons-left has-icons-right">
-            <input class="input" type="email" style="width: 270px" placeholder="Email">
-            <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
-            <span class="icon is-small is-right"><i class="fas fa-check"></i></span>
-          </p>
+      <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+        <div class="dropdown-content">
+          <div class="dropdown-item">
+            <a class="navbar-item" href="../about/about.html">About</a>
+          </div>
+          <div class="dropdown-item">
+            <a class="navbar-item" href="../contact/contact.html">Contact</a>
+          </div>
         </div>
         <div class="field">
           <p class="control has-icons-left">
             <input class="input" type="password" style="width: 270px" placeholder="Password">
             <span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
           </p>
+        </div>
       </container>
+
         <!-- ------------------- LOGIN - SIGN UP - BUTTONS ------------------- -->
         <div class="btnContainer">
          <div class="field is-grouped pt-5">
           <p class="control"><button class="button">Login</button></p>
           <p class="control"><button class="button">Sign up</button></p>
       </div>
+    </div>
+  </nav>
+</header> 
+<!-- ------------------------------- SIGN UP ------------------------------- -->
+<container class="container">
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true">
+        <form class="signup-form">
+          <div class="signup">
+              <label class="signupText"for="chk" aria-hidden="true">Sign up</label>
+              <input type="text" id="firstname-signup" name="txt" placeholder="First Name" required="">
+              <input type="text" id="lastname-signup" name="txt" placeholder="Last Name" required="">
+              <input type="text" id="location-signup" name="txt" placeholder="Location" required="">
+              <input type="text" id="bio-signup" name="txt" placeholder="Bio" required="">
+              <input type="email" id="email-signup" name="email" placeholder="Email" required="">
+              <input type="password" id="password-signup" name="pswd" placeholder="Password" required="">
+              <button class="signupButton" type="submit" value="signup">Sign up</button>
+          </div>
+        </form>
+        <!-- -------------------------------- LOGIN -------------------------------- -->
+        <div class="login">
+          <form class="login-form">
+            <div>
+              <label class="signinText" for="chk" aria-hidden="true">Sign in</label>
+              <input id="email-login" type="email" name="email" placeholder="Email" required="">
+            </div>
+            <div>
+              <input id="password-login" type="password" name="pswd" placeholder="Password" required="">
+            </div>
+            <div>
+              <button class="loginButton" id="submitLogin" type="submit">Sign in</button>
+            </div>
+          </form>
         </div>
       
     </section>
+  </main>
   <!-- ------------------------------- FOOTER -------------------------------- -->
   <footer>
   <h3 class="has-text-centered">

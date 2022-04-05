@@ -8,55 +8,65 @@ html {
   }
 /* ---------------------------------- FONT ---------------------------------- */
   body {
-    font-family: "Raleway", sans-serif;
-    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
-
-/* --------------------------------- HEADER --------------------------------- */
+/* --------------------------------- HEADER/NAV/DROPDOWN MENU --------------------------------- */
 header {
-  padding: 20px;
+  padding-top: 60px;
 }
 
-.navbar {
-  opacity: 0.3;
-  padding-top: 5px;
-  position: fixed;
-  top: 0;
-  right: 0
+.dropdown {
+  opacity: .5;
+  margin: 0;
 }
 
 header nav {
-  padding-top: 15px;
-  margin-right: 20px;
-  float: right;
+  position: fixed;
+  margin-right: 40px;
+  right: 0;
+  top:20px;
 }
 
 header nav a {
-  color: rgb(75, 75, 75);
+  color: black;
 }
 
-#inputContainer {
-  display: flex;
-  justify-content: center;
+button {
+   opacity: 0.5; 
 }
 
+.is-hoverable .navbar-item:hover {
+  color: #7258BF;
+}
+
+.searchBar {
+  border: 0.5px solid #7258BF;
+  border-radius: 5px;
+  padding: 10px;
+}
+/* ---------------------------------- LOGO ---------------------------------- */
 header img {
-  position: fixed;
-  top:0;
+  position: absolute;
+  top: 20px;
+  left: 40px;
 }
 /* --------------------------------- CONTACT -------------------------------- */
+.is-size-4 {
+  font-weight: normal;
+}
+
 .aboutContent {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  float: right;
-  width: 500px;
+  justify-content: center;
 }
 
 .aboutContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 h2 {
@@ -66,17 +76,29 @@ h2 {
 .postContainer {
   display: flex;
   flex-direction: column;
-  border: 0.5px solid black;
+  border: none;
   width: 500px;
-  padding-bottom: 5px;
-  border-radius: 15px;
-  margin-top: 50px;
+  margin-top: 10px;
+}
+
+.postContainer .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.contact, .gitHub {
+  font-family: sans-serif;
+  font-weight: lighter;
+  color: black;
+  opacity: .5;
+  font-size: 15px;
 }
 /* --------------------------------- FOOTER --------------------------------- */
-
 footer {
   font-family: sans-serif;
-
   bottom: 0;
   left: 0;
   font-size: 15px;
@@ -84,10 +106,4 @@ footer {
   padding: 0px;
   margin: 0px;
   color: rgb(75, 75, 75);
-}
-
-.wrapper {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
 }
