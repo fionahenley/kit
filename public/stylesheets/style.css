@@ -225,12 +225,13 @@ img {
 }
 
 .comments {
-  padding: 0 18px;
-  background-color: white;
+  font-weight: lighter;
+  text-align: center;
+  /* background-color: white; */
   /* max-height: 0; */
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  border-radius: 25px;
+  /* border-radius: 25px; */
 }
 
 .commentsContainer {

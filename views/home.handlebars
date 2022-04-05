@@ -1,21 +1,8 @@
   <img src="/assets/images/logo6.png" height="150px" width="150px" alt="kit_logo">
 
 
-{{!-- New post form --}}
-{{!-- <a href="/">Add New Post</a> --}}
 
 <form class="new-post-form">
-    {{!-- <div >
-        <label for="new-post-title">Title</label>
-        <input type="text" id="new-post-title"/>
-    </div>
-     <div >
-        <label for="new-post-content">content</label>
-        <textarea type="text" id="new-post-content"></textarea>
-    </div> --}}
-    {{!-- <button type="submit">save</button> --}}
-
-{{!-- End of new post form --}}
 
 <container class="contentContainer">
   <container class="writePostContainer">
@@ -52,16 +39,29 @@
             </container>
             <button type="button" class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button><a href="/post/{{post.id}}">{{post.comments.length}} comments</a>
         </container>
+
+<div class="comments">
+  {{#each post.comments}}
+  <section class="comment">
+    <div class="meta">
+      {{user.firstname}} {{user.lastname}} on {{created_at}}
+    </div>
+    <div class="text">
+      {{comment_text}}
+    </div>
+  </section>
+  {{/each}}
+</div>
       </li>
+      
 </container>
-<br><br>
-</li>
 {{/each}}
 </ul>
 
 
 <script src="/javascript/new.js"></script>
-
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
 
 {{!-- {{post.comments.length}} comment(s) {{post.created_at}}</a> --}}
 
