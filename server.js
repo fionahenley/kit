@@ -34,7 +34,7 @@ app.engine('handlebars', engine({
   layoutsDir: `${__dirname}/views/layouts`
 }));
 app.use(express.static('public'));
-require('./controller/index.js');
+require('./routes/index.js');
 const PORT = process.env.PORT || 3001;
 // Session middleware
 app.use(session(sess));

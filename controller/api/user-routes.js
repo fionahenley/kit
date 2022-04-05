@@ -1,6 +1,8 @@
 const router = require('express').Router();
-const { User, Post, Comment, Like } = require('../../model');
+const { stores } = require('sessions');
+const { User, Post, Like } = require('../../models');
 const withAuth = require('../../utils/auth');
+var sessionName = global.String;
 
 // GET /api/users
 router.get('/', (req, res) => {
