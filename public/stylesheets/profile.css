@@ -1,0 +1,224 @@
+/* ------------------------------- BACKGROUND ------------------------------- */
+html {
+  background: url(../assets/images/clouds.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* ---------------------------------- FONT ---------------------------------- */
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: rgb(75, 75, 75);
+  line-height: 2;
+}
+
+/* --------------------------------- HEADER --------------------------------- */
+header {
+  padding: 20px;
+}
+
+.title {
+  font-size: 35px;
+}
+
+.navbar {
+  padding-top: 5px;
+  opacity: 0.3;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+header nav {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+}
+
+nav h1 {
+  justify-content: left;
+}
+
+header li {
+  list-style: none;
+  float: right;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+header nav ul li a {
+  color: black;
+  font-weight: bold;
+}
+
+/* ---------------------------------- PROFILE INFORMATION ---------------------------------- */
+.infoContainer {
+  margin-left: 20px;
+}
+
+.title {
+  color: rgb(75, 75, 75);
+  padding-left: 25px;
+  padding-top: 20px;
+}
+
+img {
+  margin-left: 75px;
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-after;
+  align-items: center;
+}
+
+.field {
+  opacity: 0.1;
+}
+
+li {
+  padding-left: 50px;
+  padding-top: 10px;
+}
+
+.info a {
+  color: rgb(75, 75, 75);
+  font-size: 15px;
+}
+
+
+/* ----------------------------------- BIO ---------------------------------- */
+
+.bioContent {
+  width: 600px;
+  margin-right: 230px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.bio {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bioConent {
+  display: flex;
+  flex-basis: 70%;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+/* .bioContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-right: 300px;
+} */
+
+/* ---------------------------------- POSTS --------------------------------- */
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.postContainer {
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid white;
+  width: 500px;
+  padding-bottom: 5px;
+  border-radius: 15px;
+  margin-top: 50px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  border: none;
+  opacity: 0.5;
+}
+
+.button:hover {
+  background-color: #ccc;
+}
+
+.postDateAndTime {
+  float: right;
+}
+
+/* -------------------------------- COMMENTS -------------------------------- */
+.collapsible {
+  cursor: pointer;
+  width: 30%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 12px;
+  color: black;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #ccc;
+}
+
+.commentContainer {
+  border-bottom: 0.5px solid black;
+  float: right;
+  border-radius: 0.25;
+}
+
+.comments {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-radius: 25px;
+}
+
+.commentsContainer {
+  opacity: 0.5;
+}
+
+.collapsible:after {
+  content: "\02795";
+  font-size: 13px;
+  color: white;
+}
+
+.active:after {
+  content: "\2796";
+  padding-top: 3px;
+}
+
+.commentDateAndTime {
+  display: flex;
+  flex-direction: row;
+}
+
+/* --------------------------------- FOOTER --------------------------------- */
+
+footer {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-family: sans-serif;
+  font-size: 15px;
+  color: rgb(75, 75, 75);
+}
+

@@ -25,6 +25,7 @@ User.init(
             autoIncrement: true
         },
         // define a name column
+
         firstname: {
             type: DataTypes.STRING,
             allowNull: false
@@ -39,7 +40,7 @@ User.init(
         },
         bio: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         // define an email column
         email: {
