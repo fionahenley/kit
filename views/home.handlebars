@@ -1,12 +1,28 @@
   <img src="/assets/images/logo6.png" height="150px" width="150px" alt="kit_logo">
 
-<a href="/dashboard/new">Add New Post</a>
+
+{{!-- New post form --}}
+<a href="/">Add New Post</a>
+
+<form class="new-post-form">
+    <div >
+        <label for="new-post-title">Title</label>
+        <input type="text" id="new-post-title"/>
+    </div>
+     <div >
+        <label for="new-post-content">content</label>
+        <textarea type="text" id="new-post-content"></textarea>
+    </div>
+    <button type="submit">save</button>
+</form>
+
+{{!-- End of new post --}}
 
 <container class="contentContainer">
   <container class="writePostContainer">
     <container class="postBtnContainer">
       <input class="input postInput is-small is-rounded" type="text" placeholder="What's happening?">
-      <button class="button postButton is-rounded">Post</button>
+      <button class="button postButton is-rounded">New Post</button>
     </container>
   </container>
 </container>
@@ -39,6 +55,9 @@
 </li>
 {{/each}}
 </ul>
+
+
+<script src="/javascript/new.js"></script>
 
 {{!-- {{post.comments.length}} comment(s) {{post.created_at}}</a> --}}
 
