@@ -2,30 +2,33 @@
 
 
 {{!-- New post form --}}
-<a href="/">Add New Post</a>
+{{!-- <a href="/">Add New Post</a> --}}
 
 <form class="new-post-form">
-    <div >
+    {{!-- <div >
         <label for="new-post-title">Title</label>
         <input type="text" id="new-post-title"/>
     </div>
      <div >
         <label for="new-post-content">content</label>
         <textarea type="text" id="new-post-content"></textarea>
-    </div>
-    <button type="submit">save</button>
-</form>
+    </div> --}}
+    {{!-- <button type="submit">save</button> --}}
 
-{{!-- End of new post --}}
+{{!-- End of new post form --}}
 
 <container class="contentContainer">
   <container class="writePostContainer">
+    <input type="text" id="new-post-title" placeholder="Title"/>
     <container class="postBtnContainer">
-      <input class="input postInput is-small is-rounded" type="text" placeholder="What's happening?">
-      <button class="button postButton is-rounded">New Post</button>
+      <input class="input postInput is-small is-rounded" id="new-post-content" type="text" placeholder="What's happening?">
+          <button class="button postButton is-rounded" type="submit">save</button>
+
+      {{!-- <button class="button postButton is-rounded">New Post</button> --}}
     </container>
   </container>
 </container>
+</form>
 
 <!-- ------------- POST TEXT STARTS HERE ------------- -->
 
@@ -58,6 +61,7 @@
 
 
 <script src="/javascript/new.js"></script>
+
 
 {{!-- {{post.comments.length}} comment(s) {{post.created_at}}</a> --}}
 
