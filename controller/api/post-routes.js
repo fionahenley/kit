@@ -17,18 +17,18 @@ router.get('/', (req, res) => {
         include: [
             // include the Comment model here:
             {
-              model: Comment,
-              attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-              include: {
-                model: User,
-                attributes: ['firstname', 'lastname']
-              }
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['firstname', 'lastname']
+                }
             },
             {
-              model: User,
-              attributes: ['firstname', 'lastname']
+                model: User,
+                attributes: ['firstname', 'lastname']
             }
-          ]
+        ]
     })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {
@@ -52,18 +52,18 @@ router.get('/:id', (req, res) => {
         include: [
             // include the Comment model here:
             {
-              model: Comment,
-              attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-              include: {
-                model: User,
-                attributes: ['firstname', 'lastname']
-              }
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['firstname', 'lastname']
+                }
             },
             {
-              model: User,
-              attributes: ['firstname', 'lastname']
+                model: User,
+                attributes: ['firstname', 'lastname']
             }
-          ]
+        ]
     })
         .then(dbPostData => {
             if (!dbPostData) {
@@ -93,53 +93,65 @@ router.post('/', withAuth, (req, res) => {
 });
 
 // PUT /api/posts/upvote
-router.put('/likes', (req, res) => {
-    Like.create({
-        user_id: req.body.user_id,
-        post_id: req.body.post_id
-    }).then(() => {
-        // then find the post we just voted on
-        return Post.findOne({
-            where: {
-                id: req.body.post_id
-            },
-            attributes: [
-                'id',
-                'title',
-                'content',
-                'created_at',
-                // use raw MySQL aggregate function query to get a count of how many votes the post has and return it under the name `vote_count`
-                [
-                    sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),
-                    'vote_count'
-                ]
-            ]
-        })
-            .then(dbPostData => res.json(dbPostData))
-            .catch(err => {
-                console.log(err);
-                res.status(400).json(err);
-            });
-    });
-});
+// router.put('/likes', (req, res) => {
+//     Like.create({
+//         user_id: req.body.user_id,
+//         post_id: req.body.post_id
+//     }).then(() => {
+//         // then find the post we just voted on
+//         return Post.findOne({
+//             where: {
+//                 id: req.body.post_id
+//             },
+//             attributes: [
+//                 'id',
+//                 'title',
+//                 'content',
+//                 'created_at',
+//                 // use raw MySQL aggregate function query to get a count of how many votes the post has and return it under the name `vote_count`
+//                 [
+//                     sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),
+//                     'vote_count'
+//                 ]
+//             ]
+//         })
+//             .then(dbPostData => res.json(dbPostData))
+//             .catch(err => {
+//                 console.log(err);
+//                 res.status(400).json(err);
+//             });
+//     });
+// });
 
-    router.delete('/:id', (req, res) => {
-        Post.destroy({
-            where: {
-                id: req.params.id
-            }
-        })
-            .then(dbPostData => {
-                if (!dbPostData) {
-                    res.status(404).json({ message: 'No post found with this id' });
-                    return;
-                }
-                res.json(dbPostData);
-            })
+router.put('/likes', withAuth, (req, res) => {
+    // custom static method created in models/Post.js
+    if (req.session) {
+        Like.create({ ...req.body, user_id: req.session.user_id }, { Like, Comment, User })
+            .then(updatedVoteData => res.json(updatedVoteData))
             .catch(err => {
                 console.log(err);
                 res.status(500).json(err);
             });
-    });
+    }
+});
 
-    module.exports = router;
+router.delete('/:id', (req, res) => {
+    Post.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(dbPostData => {
+            if (!dbPostData) {
+                res.status(404).json({ message: 'No post found with this id' });
+                return;
+            }
+            res.json(dbPostData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+module.exports = router;
