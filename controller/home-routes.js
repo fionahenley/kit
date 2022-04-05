@@ -3,9 +3,6 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../model');
 
-// router.get('/', withAuth, (req, res) => {
-//     res.render('home',{layout: 'main'});
-// });
 
 router.get('/', withAuth, (req, res) => {
   Post.findAll({
@@ -35,7 +32,7 @@ router.get('/', withAuth, (req, res) => {
       // pass a single post object into the homepage template
       // console.log(dbPostData[0]);
       const posts = dbPostData.map(post => post.get({ plain: true }));
-      res.render('home', { posts });
+      res.render('home', { posts, loggedIn: req.session.loggedIn });
     })
     .catch(err => {
       console.log(err);
@@ -80,7 +77,7 @@ router.get('/post/:id', withAuth, (req, res) => {
       const post = dbPostData.get({ plain: true });
 
       // pass data to template
-      res.render('single-post', { post });
+      res.render('single-post', { post, loggedIn: req.session.loggedIn });
     })
     .catch(err => {
       console.log(err);
@@ -90,11 +87,16 @@ router.get('/post/:id', withAuth, (req, res) => {
 
 router.get('/home', withAuth, (req, res) => {
   console.log(req.session)
-  res.render('home',{layout: 'main'});
+  res.render('home');
 });
 
 router.get('/login', (req, res) => {
-  res.render('login',{layout: 'main'});
+  res.render('login');
 });
+
+router.get('/dashboard/new', withAuth,(req, res) => {
+  res.render('newPost', {loggedIn: req.session.loggedIn});
+});
+
 
 module.exports = router;

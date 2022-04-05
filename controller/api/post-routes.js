@@ -83,7 +83,7 @@ router.post('/', withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
         content: req.body.content,
-        user_id: req.body.user_id
+        user_id: req.session.user_id
     })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {

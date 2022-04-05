@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { stores } = require('sessions');
-const { User, Post, Like } = require('../../models');
+const { User, Post, Like } = require('../../model');
 const withAuth = require('../../utils/auth');
 var sessionName = global.String;
 
