@@ -8,11 +8,6 @@ body {
 
   /* SIGNUP/LOGIN PAGE  */
 
-  /* h1 {
-    font-size: 50px;
-    color: #000;
-  } */
-
   .loginContainer{
     margin: 0;
     padding: 0;
@@ -137,11 +132,6 @@ img {
   opacity: 0.1;
 }
 
-li {
-  padding-left: 50px;
-  padding-top: 10px;
-}
-
 .info a {
   color: rgb(75, 75, 75);
   font-size: 15px;
@@ -263,5 +253,133 @@ li {
   flex-direction: row;
 }
 
+/* Write a post container styling STARTS here */
+.writePostContainer {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  width: 700px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 15px;
+   border: 0.5px solid rgb(245, 244, 244);
+}
 
+.postInput {
+  max-width: 500px;
+  padding: 20px;
+}
  
+.postButton {
+  margin-left: 20px;
+  margin-right: 35px;
+  width: 100px;
+  background-color: #7258BF;
+  border: none;
+  color: white;
+}
+
+.postButton:hover {
+  background-color: white;
+  color: #7258BF;
+}
+
+.postBtnContainer {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+}
+/* Write a post container styling ENDS here */
+
+
+
+/* This the post text */
+.postName {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+
+/* This is the button next to the comment input */
+.btnContainer {
+  padding-left: 20px;
+}
+
+.commentInput {
+  max-width: 100%;
+  margin: 10px;
+}
+
+.send {
+  margin: 10px;
+  width: 100px;
+  color: black;
+  border: none;
+  opacity: 0.5;
+}
+
+.send:hover {
+  background-color: white;
+  color:rgb(75, 75, 75);
+  opacity: 1.0;
+}
+
+.likeButton {
+  border: none;
+  border-radius: 25px;
+  background-color: white;
+}
+
+.fa-heart {
+  color: #7258BF;
+}
+
+.fa-comments {
+  color: #7258BF;
+  margin-left: 25px;
+  margin-top: 0%
+}
+
+.fa-comments:hover {
+  color: rgb(249, 154, 209);
+}
+
+
+.fa-heart:hover {
+  color: rgb(249, 154, 209);
+}
+
+/* writeCommentContainer */
+
+.writeCommentContainer {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin-left: 35px;
+  width: 600px;
+}
+
+.commentInput {
+  max-width: 500px;
+}
+
+.commentButton {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 0%;
+  width: 100px;
+  background-color: #7258BF;
+  border: none;
+  color: white;
+}
+
+.profileName {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.postTitle {
+  font-family: "Raleway", sans-serif;
+  font-style: italic;
+  font-size: 12px;
+}

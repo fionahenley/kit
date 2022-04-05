@@ -1,20 +1,46 @@
-<ol class="post-list">
-  {{#each posts as |post|}}
-  <li>
-    <article class="post">
-      <div class="title">
-        <a href="{{post.content}}" target="_blank">{{post.title}}</a>
-        <span>({{post.content}})</span>
-      </div>
-      <div class="meta">
-        {{post.vote_count}} point(s) by {{post.user.firstname}} {{post.user.lastname}} on
-        {{post.created_at}}
-        |
-        <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-      </div>
-    </article>
-  </li>
-  {{/each}}
-</ol>
+  <img src="/assets/images/logo6.png" height="150px" width="150px" alt="kit_logo">
 
 <a href="/dashboard/new">Add New Post</a>
+
+<container class="contentContainer">
+  <container class="writePostContainer">
+    <container class="postBtnContainer">
+      <input class="input postInput is-small is-rounded" type="text" placeholder="What's happening?">
+      <button class="button postButton is-rounded">Post</button>
+    </container>
+  </container>
+</container>
+
+<!-- ------------- POST TEXT STARTS HERE ------------- -->
+
+<br><br>
+<container class="contentContainer ">
+  <div class="commentContent">
+    <ul>
+      {{#each posts as |post|}}
+
+      <li>
+        <container>
+          <container class="writeCommentContainer">
+            <h2 class="profileName">{{post.user.firstname}} {{post.user.lastname}}</h2>
+            <p class="postTitle"> {{post.title}}</p>
+            <h5>{{post.content}}</h5>
+          </container>
+            <container class="postBtnContainer">
+              <input class="input commentInput is-small is-rounded" type="text" placeholder="Comment">
+              <button class="button commentButton is-rounded">Post</button> 
+              {{post.vote_count}} <button type="button" class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button>
+            </container>
+            <button type="button" class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button><a href="/post/{{post.id}}">{{post.comments.length}} comments</a>
+        </container>
+      </li>
+</container>
+<br><br>
+</li>
+{{/each}}
+</ul>
+
+{{!-- {{post.comments.length}} comment(s) {{post.created_at}}</a> --}}
+
+
+
