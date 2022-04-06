@@ -17,7 +17,7 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/home');
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
@@ -49,7 +49,7 @@ async function signupFormHandler(event) {
     });
 
     if (response.ok) {
-      window.location.replace('/home');
+      window.location.replace('/');
     } else {
       alert(response.statusText);
     }

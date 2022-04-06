@@ -32,6 +32,9 @@ router.get('/', withAuth, (req, res) => {
       // pass a single post object into the homepage template
       // console.log(dbPostData[0]);
       const posts = dbPostData.map(post => post.get({ plain: true }));
+      posts.sort(function(a,b){
+        return b.id - a.id;
+      })
       res.render('home', { posts, loggedIn: req.session.loggedIn });
     })
     .catch(err => {
