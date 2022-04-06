@@ -43,11 +43,12 @@
               <button type="button" class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>
               <a href="/post/{{post.id}}">{{post.comments.length}}</a>
           </section>
+          <br>
 
-        <div class="container comments commentsBox">
+<div class="container comments commentsBox">
   {{#each post.comments}}
   <section class="comment">
-    <div class="meta">
+    <div class="meta usersComment">
       {{user.firstname}} {{user.lastname}}
             <div class="commentBox">
               <div class="text">
@@ -56,10 +57,12 @@
           {{/each}}
         </div>
       </li>
-<br>
+<hr>
 </container>
 {{/each}}
 </ul>
+
+
 
 
 <script src="/javascript/new.js"></script>

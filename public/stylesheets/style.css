@@ -527,3 +527,10 @@ img {
   padding-top: 10px;
   padding-left: 10px;
 }
+
+hr{
+  height: .5px;
+  background-color: rgb(165, 27, 140);
+  border: none;
+
+}
