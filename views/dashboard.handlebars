@@ -1,6 +1,17 @@
-<div class="container dashboardImage">
+<div class="container">
+<img class="headerLogo" src="/assets/images/logo6.png" height="50px" width="50px" alt="kit_logo">
+</div>
+<div class="dashProfileInfo container">
+<i class="fa-brands fa-github infoIcon"></i>&nbsp;{{session.firstname}}{{session.lastname}}&nbsp; &nbsp; &nbsp; &nbsp; 
+<i class="fa-regular infoIcon fa-envelope"></i>&nbsp;{{session.email}}&nbsp; &nbsp; &nbsp; &nbsp; 
+<i class="fa-solid infoIcon fa-location-pin"></i>&nbsp;{{session.location}}        
+
+</div>
+<br><br>
+
+{{!-- <div class="container dashboardImage">
     <img class="headerLogo" src="/assets/images/logo6.png" height="150px" width="150px" alt="kit_logo">
-</div>   
+</div>    --}}
 
         {{!-- <div class="container dashboardImage">
         {{session.firstname}}{{session.lastname}} <br>
@@ -38,10 +49,10 @@
 
                     <section class="postBtnContainer container likeIconContainer">
                         <button type="button" class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button><a
-                            href="/post/{{post.id}}">{{post.comments.length}}Like(s)</a>
+                            href="/post/{{post.id}}">{{post.comments.length}}</a>
                         <button type="button"
                             class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>
-                        <a href="/post/{{post.id}}">{{post.comments.length}} Comment(s)</a>
+                        <a href="/post/{{post.id}}">{{post.comments.length}}</a>
                     </section>
 
     </container>

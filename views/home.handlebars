@@ -1,3 +1,4 @@
+
 <div class="container homeImage">
 <img src="/assets/images/logo6.png" height="100px" width="100px" alt="kit_logo">
 </div>
@@ -38,9 +39,9 @@
         </section>
 
         <section class="postBtnContainer container likeIconContainer">
-              <button type="button" class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button><a href="/post/{{post.id}}">{{post.vote_count}} Like(s)</a>
+              <button type="button" class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button><a href="/post/{{post.id}}">{{post.vote_count}}</a>
               <button type="button" class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>
-              <a href="/post/{{post.id}}">{{post.comments.length}} Comment(s)</a>
+              <a href="/post/{{post.id}}">{{post.comments.length}}</a>
           </section>
 
         <div class="container comments commentsBox">
@@ -55,7 +56,7 @@
           {{/each}}
         </div>
       </li>
-
+<br>
 </container>
 {{/each}}
 </ul>

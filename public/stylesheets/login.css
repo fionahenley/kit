@@ -1,6 +1,6 @@
 /* ------------------------------- BACKGROUND ------------------------------- */
 html {
-  background: url(../assets/images/clouds.jpeg) no-repeat center center fixed;
+  /* background: url(../assets/images/clouds.jpeg) no-repeat center center fixed; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -38,10 +38,10 @@ header nav ul li {
   margin-left: 25px;
 }
 
-/* header nav ul li a {
+header nav ul li a {
   color: black;
   font-weight: bold;
-} */
+}
 
 header nav a {
   color: rgb(75, 75, 75);
@@ -52,7 +52,7 @@ header nav a {
   flex-direction: column;
   align-items: center;
 }
-/* 
+
 li {
   list-style: none;
 }
@@ -60,7 +60,7 @@ li {
 header nav ul li {
   display: inline-block;
   margin-left: 25px;
-} */
+}
 
 /* --------------------------------- BUTTONS -------------------------------- */
 .btnContainer {
@@ -79,7 +79,7 @@ header nav ul li {
 .button {
   border: none;
   opacity: 0.3;
-  background-color: #d4e9ff;
+  /* background-color: #d4e9ff; */
 }
 
 p .button {
@@ -90,23 +90,5 @@ p .button:hover {
   color: black;
 }
 
-/* ---------------------------------- LOGO ---------------------------------- */
 
-/* img {
-  margin-left: 350px;
-} */
-
-/* --------------------------------- FOOTER --------------------------------- */
-
-footer {
-  font-family: sans-serif;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  font-size: 15px;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
-  color: rgb(75, 75, 75);
-}
 

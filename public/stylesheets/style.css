@@ -395,11 +395,12 @@ img {
 
 .commentMainBox {
   padding-left: 20px;
-  width: 30em;
-  margin-top: 2em;
+  height: 200px;
+  width: 20em;
+  margin-top: 40px;
   font: 1.8rem/1.4 Georgia, serif;
   font-style: italic;
-  border: #000 solid 1px;
+  border: rgb(249, 247, 247) solid 1px;
   border-radius: 15px;
 }
 
@@ -448,7 +449,7 @@ img {
   margin-top: 15px;
   width: 500px;
   text-align: left;
-  border: rgb(253, 253, 253) solid 1px;
+  border: rgb(185, 29, 164) solid 1px;
   border-radius: 0px 20px 15px 20px; 
 
 }
@@ -502,5 +503,20 @@ img {
 
 .headerLogo {
   margin: 0%;
-  padding-bottom: 25px;
+}
+
+.postedBy {
+  font-style: normal;
+  font-size: medium;
+}
+
+.postedByContainer {
+  width: 600px;
+  height: 20px;
+}
+
+.dashProfileInfo {
+  color: #573b8a;
+  width: 500px;
+  justify-content: space-around;
 }
