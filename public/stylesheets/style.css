@@ -467,6 +467,9 @@ img {
 .homeTitleInputBox {
   text-align: left;
   width: 300px;
+  padding: 18px;
+  border-radius: 20px;
+  background-color: white;
   margin: 0px 0px 0px 35px;
 }
 
@@ -487,7 +490,7 @@ img {
 }
 
 .homeImage {
-  width: 700px;
+  width: 100vw;
   /* border: rgb(77, 5, 44) solid 1px; */
   border-radius: 0px 20px 15px 20px; 
 }
@@ -529,8 +532,7 @@ img {
 }
 
 hr{
-  height: .5px;
-  background-color: rgb(165, 27, 140);
+  height: 1px;
+  background-color: #ccc;
   border: none;
-
 }
