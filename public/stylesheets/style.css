@@ -397,11 +397,11 @@ img {
   padding-left: 20px;
   height: 200px;
   width: 20em;
-  margin-top: 40px;
+  margin-top: 70px;
   font: 1.8rem/1.4 Georgia, serif;
   font-style: italic;
   border: rgb(249, 247, 247) solid 1px;
-  border-radius: 15px;
+  border-radius: 0px 70px 15px 70px;
 }
 
 .postTitle {
@@ -423,7 +423,7 @@ img {
   padding: 10px;
   margin: 10px 0px 10px 25px;
   width: 26em;
-  border: rgb(250, 247, 249) solid 1px;
+  border: rgb(129, 24, 94) solid 1px;
   border-radius: 0px 20px 15px 20px; 
 }
 
@@ -449,7 +449,7 @@ img {
   margin-top: 15px;
   width: 500px;
   text-align: left;
-  border: rgb(185, 29, 164) solid 1px;
+  border: rgb(185, 73, 182) solid 1px;
   border-radius: 0px 20px 15px 20px; 
 
 }
@@ -519,4 +519,11 @@ img {
   color: #573b8a;
   width: 500px;
   justify-content: space-around;
+}
+
+.commentText {
+  width: 400px;
+  border-radius: 15px;
+  padding-top: 10px;
+  padding-left: 10px;
 }

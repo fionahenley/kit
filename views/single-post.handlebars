@@ -3,13 +3,13 @@
 </div>
 
 <div class="container postedByContainer">
+            <p class="postedBy">Title: {{post.title}}</p>
             <p class="postedBy">Posted by: {{post.user.firstname}} {{post.user.lastname}}</p>
             <p class="postDate">{{post.created_at}}</p>
 </div>
 <div class="container commentMainBox">
   <article class="post">
     <div class="title"></div>
-      <p class="postTitle">Title: {{post.title}}</p><br>
         <q>{{post.content}}</q><br><br>
   </div>
 
@@ -17,7 +17,8 @@
   <div class="container commentForm">
     {{post.vote_count}}<button type="button" class="upvote-btn likeButton icon is-medium fa-solid fa-heart is-rounded"></button>
     <br><br>
-    <textarea class="commentText" name="comment-body"></textarea><span><button class="commentBtn" type="submit">Post</button></span>
+    <textarea class="commentText" placeholder="comment" name="comment-body"></textarea>
+    <span><button class="commentBtn" type="submit">Post</button></span>
   </div>
 </form>
 
