@@ -1,39 +1,38 @@
-<article class="post">
-  <div class="title">
-    <a href="{{post.content}}" target="_blank">{{post.title}}</a>
-    <span>({{post.content}})</span>
+<div class="container commentMainBox">
+  <article class="post">
+    <div class="title"></div>
+      <p class="postTitle">Title: {{post.title}}</p><br>
+        <q>{{post.content}}</q><br><br>
+            <p class="postedBy">Posted by: {{post.user.firstname}} {{post.user.lastname}}</p><br><br>
   </div>
-  <div class="meta">
-    {{post.vote_count}} like(s) by {{post.user.firstname}} {{post.user.lastname}} on
-    {{post.created_at}}
-    |
+<form class="comment-form">
+  <div class="container commentForm">
+    {{post.vote_count}}<button type="button" class="upvote-btn likeButton icon is-medium fa-solid fa-heart is-rounded"></button>
+    <textarea class="commentText" name="comment-body"></textarea><span><button class="commentBtn" type="submit">Post</button></span>
+  </div>
+</form>
+
+  <div>
     <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
   </div>
 </article>
 
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">add comment</button>
-    
-    <button type="button" class="upvote-btn">upvote</button>
-  </div>
-</form>
-
-<div class="comments">
+<div class="container comments commentsBox">
   {{#each post.comments}}
   <section class="comment">
     <div class="meta">
-      {{user.firstname}} {{user.lastname}} on {{created_at}}
-    </div>
-    <div class="text">
-      {{comment_text}}
-    </div>
-  </section>
+      {{user.firstname}} {{user.lastname}}
+            <div class="commentBox">
+              <div class="text">
+                 {{comment_text}}
+</section>
+      
+
   {{/each}}
+      </div>
+
+</div>
+
 </div>
 
 <script src="/javascript/comment.js"></script>

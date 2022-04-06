@@ -1,23 +1,26 @@
-  <img src="/assets/images/logo6.png" height="150px" width="150px" alt="kit_logo">
-
+<div class="container homeImage">
+<img src="/assets/images/logo6.png" height="100px" width="100px" alt="kit_logo">
+</div>
 
 
 <form class="new-post-form">
 
-<container class="contentContainer">
-  <container class="writePostContainer">
-    <input type="text" id="new-post-title" placeholder="Title"/>
-    <container class="postBtnContainer">
-      <input class="input postInput is-small is-rounded" id="new-post-content" type="text" placeholder="What's happening?">
-          <button class="button postButton is-rounded" type="submit">save</button>
+  <container class="contentContainer">
+    <container class="writePostContainer">
+      <input class="homeTitleInputBox" type="text" id="new-post-title" placeholder="Title" />
+      <container class="postBtnContainer">
+        <input class="input postInput is-small is-rounded" id="new-post-content" type="text"
+          placeholder="What's happening?">
+        <button class="button postButton is-rounded" type="submit">Post</button>
 
-      {{!-- <button class="button postButton is-rounded">New Post</button> --}}
+        {{!-- <button class="button postButton is-rounded">New Post</button> --}}
+      </container>
     </container>
   </container>
-</container>
 </form>
 
 <!-- ------------- POST TEXT STARTS HERE ------------- -->
+
 
 <br><br>
 <container class="contentContainer ">
@@ -26,34 +29,33 @@
       {{#each posts as |post|}}
 
       <li>
-        <container>
-          <container class="writeCommentContainer">
-            <h2 class="profileName">{{post.user.firstname}} {{post.user.lastname}}</h2>
-            <p class="postTitle"> {{post.title}}</p>
-            <h5>{{post.content}}</h5>
-          </container>
-            <container class="postBtnContainer">
-              <input class="input commentInput is-small is-rounded" type="text" placeholder="Comment">
-              <button class="button commentButton is-rounded">Post</button> 
-              {{post.vote_count}} <button type="button" class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button>
-            </container>
-            <button type="button" class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button><a href="/post/{{post.id}}">{{post.comments.length}} comments</a>
-        </container>
+        <h2 class="profileName">{{post.user.firstname}} {{post.user.lastname}}</h2> <p class="postDate">{{post.created_at}}</p>
+        <section class="container postContainer">
+          <section class="writeCommentContainer">
+            <p class="homePostTitle"> Title: {{post.title}}</p>
+            <h5><i>"{{post.content}}"</i></h5>
+          </section>
+        </section>
 
-<div class="comments">
+        <section class="postBtnContainer container likeIconContainer">
+              <button type="button" class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button><a href="/post/{{post.id}}">{{post.vote_count}} Like(s)</a>
+              <button type="button" class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>
+              <a href="/post/{{post.id}}">{{post.comments.length}} Comment(s)</a>
+          </section>
+
+        <div class="container comments commentsBox">
   {{#each post.comments}}
   <section class="comment">
     <div class="meta">
-      {{user.firstname}} {{user.lastname}} on {{created_at}}
-    </div>
-    <div class="text">
-      {{comment_text}}
-    </div>
-  </section>
-  {{/each}}
-</div>
+      {{user.firstname}} {{user.lastname}}
+            <div class="commentBox">
+              <div class="text">
+                 {{comment_text}}
+</section>
+          {{/each}}
+        </div>
       </li>
-      
+
 </container>
 {{/each}}
 </ul>
@@ -64,6 +66,3 @@
 <script src="/javascript/upvote.js"></script>
 
 {{!-- {{post.comments.length}} comment(s) {{post.created_at}}</a> --}}
-
-
-
