@@ -1,0 +1,31 @@
+<section>
+    {{session.firstname}}
+    {{session.lastname}}
+</section>
+<section>
+    {{session.email}}
+</section>
+<section>
+    {{session.location}}
+</section>
+<section>
+    {{session.bio}}
+</section>
+<ol class="post-list">
+    {{#each posts as |post|}}
+    <li>
+        <article class="post">
+            <div class="title">
+                <a href="{{post.content}}" target="_blank">{{post.title}}</a>
+                <span>({{post.content}})</span>
+            </div>
+            <div class="meta">
+                {{post.vote_count}} point(s) by {{post.user.firstname}} {{post.user.lastname}} on
+                {{post.created_at}}
+                |
+                <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+            </div>
+        </article>
+    </li>
+    {{/each}}
+</ol>
