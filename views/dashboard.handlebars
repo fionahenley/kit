@@ -1,106 +1,110 @@
-<div class="container dashboardImage">
-    <img class="headerLogo" src="/assets/images/logo6.png" height="150px" width="150px" alt="kit_logo">
-</div>   
-
-        {{!-- <div class="container dashboardImage">
-        {{session.firstname}}{{session.lastname}} <br>
+<main class="flex-container-profile">
+    <section class="dash-profile">
+        <div class="homeImage">
+            <div class="profile-name"><i class="fa-brands fa-github infoIcon"></i> {{session.firstname}} {{session.lastname}}</div> <br>
+            <img src="/assets/images/2(2).png" height="175px" width="175px" alt="kit_logo">
         </div>
-         <div class="container dashboardImage">
-        {{session.email}}
+
+        <div class="bio container">
+            <i class="fa-brands fa-github infoIcon"></i> {{session.firstname}} {{session.lastname}} <br>
+            <i class="fa-regular infoIcon fa-envelope"></i> {{session.email}} <br>
+            <i class="fa-solid infoIcon fa-location-pin"></i> {{session.location}} <br>
+            <i class="fa-solid infoIcon fa-male"></i> {{session.bio}}
+
         </div>
-        <div class="container dashboardImage">
-        {{session.location}}        
+    </section>
+
+
+    <section class="main-profile">
+            <container class="contentContainer ">
+                <div class="commentContent">
+                    <ul>
+                        {{#each posts as |post|}}
+
+                        <li>
+                            <h2 class="profileName">{{post.user.firstname}} {{post.user.lastname}}</h2>
+                            <p class="postDate">{{post.created_at}}</p>
+                            <section class="container postContainer">
+                                <section class="writeCommentContainer">
+                                    <p class="homePostTitle"> Title: {{post.title}}</p>
+                                    <h5><i>"{{post.content}}"</i></h5>
+                                </section>
+                            </section>
+
+                            <section class="postBtnContainer container likeIconContainer">
+                                <button type="button"
+                                    class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button><a
+                                    href="/post/{{post.id}}">{{post.comments.length}}</a>
+                                <button type="button"
+                                    class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>
+                                <a href="/post/{{post.id}}">{{post.comments.length}}</a>
+                            </section>
+                            <hr>
+            </container>
+            {{/each}}
+            </ul>
+
         </div>
-        <div class="container dashboardImage">
-        {{session.bio}}        
-        </div> --}}
+    </section>
 
-    
+</main>
 
 
-    <!-- ------------- POST TEXT STARTS HERE ------------- -->
 
- 
-    <container class="contentContainer ">
-        <div class="commentContent">
-            <ul>
+
+<script src="/javascript/dashboard.js"></script>
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
+
+
+
+
+
+
+
+
+
+
+{{!-- <div class="container">
+    <img src="/assets/images/logo6.png" height="150px" width="150px" alt="kit_logo">
+    <div>
+
+
+        <div class="container bioContainer">
+            <section>
+                {{session.firstname}}
+                {{session.lastname}}
+            </section>
+            <section>
+                {{session.email}}
+            </section>
+            <section>
+                {{session.location}}
+            </section>
+            <section>
+                {{session.bio}}
+            </section>
+        </div>
+
+
+        <div class="container userContents">
+            <ul class="post-list">
                 {{#each posts as |post|}}
-
                 <li>
-                    <h2 class="profileName">{{post.user.firstname}} {{post.user.lastname}}</h2>
-                    <p class="postDate">{{post.created_at}}</p>
-                    <section class="container postContainer">
-                        <section class="writeCommentContainer">
-                            <p class="homePostTitle"> Title: {{post.title}}</p>
-                            <h5><i>"{{post.content}}"</i></h5>
-                        </section>
-                    </section>
+                    <article class="post">
+                        <div class="title">
+                            <a href="{{post.content}}" target="_blank">{{post.title}}</a>
+                            <span>({{post.content}})</span>
+                        </div>
+                        <div class="meta">
+                            {{post.vote_count}} point(s) by {{post.user.firstname}} {{post.user.lastname}} on
+                            {{post.created_at}}
+                            |
+                            <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+                        </div>
+                    </article>
+                </li>
+                {{/each}}
+            </ul>
 
-                    <section class="postBtnContainer container likeIconContainer">
-                        <button type="button" class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button><a
-                            href="/post/{{post.id}}">{{post.comments.length}}Like(s)</a>
-                        <button type="button"
-                            class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>
-                        <a href="/post/{{post.id}}">{{post.comments.length}} Comment(s)</a>
-                    </section>
-
-    </container>
-    {{/each}}
-    </ul>
-
-    <script src="/javascript/dashboard.js"></script>
-    <script src="/javascript/comment.js"></script>
-    <script src="/javascript/upvote.js"></script>
-
-
-
-
-
-
-
-
-
-
-    {{!-- <div class="container">
-        <img src="/assets/images/logo6.png" height="150px" width="150px" alt="kit_logo">
-        <div>
-
-
-            <div class="container bioContainer">
-                <section>
-                    {{session.firstname}}
-                    {{session.lastname}}
-                </section>
-                <section>
-                    {{session.email}}
-                </section>
-                <section>
-                    {{session.location}}
-                </section>
-                <section>
-                    {{session.bio}}
-                </section>
-            </div>
-
-
-            <div class="container userContents">
-                <ul class="post-list">
-                    {{#each posts as |post|}}
-                    <li>
-                        <article class="post">
-                            <div class="title">
-                                <a href="{{post.content}}" target="_blank">{{post.title}}</a>
-                                <span>({{post.content}})</span>
-                            </div>
-                            <div class="meta">
-                                {{post.vote_count}} point(s) by {{post.user.firstname}} {{post.user.lastname}} on
-                                {{post.created_at}}
-                                |
-                                <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-                            </div>
-                        </article>
-                    </li>
-                    {{/each}}
-                </ul>
-
-            </div> --}}
+        </div> --}}
