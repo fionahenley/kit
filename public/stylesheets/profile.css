@@ -15,15 +15,14 @@ body {
 }
 
 /* --------------------------------- HEADER --------------------------------- */
-header {
-  padding: 20px;
-}
+
 
 .title {
   font-size: 35px;
 }
 
 .navbar {
+  margin: 10px;
   padding-top: 5px;
   opacity: 0.3;
   position: fixed;
@@ -67,9 +66,6 @@ header nav ul li a {
   padding-top: 20px;
 }
 
-img {
-  margin-left: 75px;
-}
 
 .imgContainer {
   display: flex;
@@ -227,20 +223,24 @@ h3 {
 }
 
 .dash-profile {
-  padding: 25px 50px 0px 25px;
-  margin-top: 5%;
+text-align: left;  
+padding: 0px 50px 0px 100px;
+  margin-top: 2%;
   width: 25vw;
+  position:fixed;
   /* height: 100px;
   border: #573b8a solid 2px; */
 }
 
-.main-profile {
-  margin-left: 5%;
-  margin-top: 5%;
-  width: 50vw;
+.dash-profile img {
+  margin-left: 10%;
 }
 
-
+.main-profile {
+  margin-left: 30%;
+  margin-top: 2%;
+  width: 50vw;
+}
 
 .homeImage {
   width: 50vw;

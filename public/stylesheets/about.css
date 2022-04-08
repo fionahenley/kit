@@ -25,6 +25,7 @@ header nav {
 }
 
 header nav a {
+  margin: 20px;
   color: black;
 } 
 
