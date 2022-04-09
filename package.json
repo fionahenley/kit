@@ -29,6 +29,9 @@
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0",
     "sessions": "^0.0.2-7",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "mustache-express": "^1.2.4",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7"
   }
 }
