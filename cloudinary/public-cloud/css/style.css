@@ -29,11 +29,11 @@ body, html {
   
   .file-upload-container:hover {
       cursor: pointer;
-      background: #3949AB;
+      background: #f29afa;
   }
   
   #img-preview {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
   }

@@ -11,7 +11,7 @@ app.use('/public', express.static('public'));
 
 // Routes
 app.get('/', function(req, res) {
-  res.render('index.html');
+  res.render('cloud-index.html');
 });
 
 app.listen(3001, function() {
