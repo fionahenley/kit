@@ -1,10 +1,16 @@
-<div class="container homeImage">
-<img src="/assets/images/logo6.png" height="100px" width="100px" alt="kit_logo">
-</div>
+<div class="flex-container">
+
+{{!-- left column --}}
+  <div class="flex-left-home">
+    <div class="container homeImage">
+      <img src="/assets/images/logo6.png" height="100px" width="100px" alt="kit_logo">
+    </div>
+  </div>
 
 
+
+  <div class="flex-right-home">
 <form class="new-post-form">
-  <container class="contentContainer">
     <container class="writePostContainer">
       <input class="homeTitleInputBox" type="text" id="new-post-title" placeholder="Title" />
       <container class="postBtnContainer">
@@ -13,15 +19,12 @@
         <button class="button postButton is-rounded" type="submit">Post</button>
 
         {{!-- <button class="button postButton is-rounded">New Post</button> --}}
-      </container>
+
     </container>
   </container>
 </form>
 
 <!-- ------------- POST TEXT STARTS HERE ------------- -->
-
-
-
 
 <br><br>
 <container class="contentContainer ">
@@ -31,17 +34,17 @@
       <li>
 
 
-{{!--  --}}
-<div class="flex-container container">
-    <div class="flex-left">
-<img src="/assets/images/logo6.png" height="100px" width="100px" alt="kit_logo">
-    </div>
-    <div class="flex-right">
-          <p>{{post.user.firstname}} {{post.user.lastname}}</p>  
-          <p class="postDate">{{post.created_at}}</p>
-    </div>
-</div>
-{{!--  --}}
+        {{!-- --}}
+        <div class="flex-container container">
+          <div class="flex-left">
+            <img src="/assets/images/logo6.png" height="100px" width="100px" alt="kit_logo">
+          </div>
+          <div class="flex-right">
+            <p>{{post.user.firstname}} {{post.user.lastname}}</p>
+            <p class="postDate">{{post.created_at}}</p>
+          </div>
+        </div>
+        {{!-- --}}
         <section class="container postContainer">
           <section class="writeCommentContainer">
             <p class="homePostTitle"> Title: {{post.title}}</p>
@@ -50,22 +53,27 @@
         </section>
 
         <section class="postBtnContainer container likeIconContainer">
-              <button type="button" class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button><a href="/post/{{post.id}}">{{post.vote_count}} Like(s)</a>
-              <button type="button" class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>
-              <a href="/post/{{post.id}}">{{post.comments.length}} Comment(s)</a>
-          </section>
-
+          <button type="button" onclick="location.href='/post/{{post.id}}'"
+            class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button>
+          <p>{{post.vote_count}}</p>
+          <button type="button" onclick="location.href='/post/{{post.id}}'"
+            class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>
+          <button type="button" onclick="location.href='/post/{{post.id}}'"
+            class="likeButton icon is-medium fa-solid fa-trash is-rounded"></button>
+        </section>
+        <button class="collapsible">{{post.comments.length}} Comment(s)</button>
         <div class="container comments commentsBox">
-  {{#each post.comments}}
-  <section class="comment">
-    <div class="meta">
-      {{user.firstname}} {{user.lastname}}
-            <div class="commentBox">
-              <div class="text">
-                 {{comment_text}}
-</section>
+          {{#each post.comments}}
+          <section class="comment commentContainer">
+            <div class="meta">
+              {{user.firstname}} {{user.lastname}}
+              <div class="commentBox">
+                <div class="text">
+                  {{comment_text}}
+          </section>
           {{/each}}
         </div>
+
       </li>
 
 </container>
@@ -73,8 +81,13 @@
 </ul>
 
 
+  </div>
+
 <script src="/javascript/new.js"></script>
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/upvote.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/viewCommentbtn.js"></script>
+
 
 {{!-- {{post.comments.length}} comment(s) {{post.created_at}}</a> --}}

@@ -10,7 +10,7 @@
             <i class="fa-regular infoIcon fa-envelope"></i> {{session.email}} <br>
             <i class="fa-solid infoIcon fa-location-pin"></i> {{session.location}} <br>
             <i class="fa-solid infoIcon fa-male"></i> {{session.bio}}
-
+<p>session: {{session.id}}</p>
         </div>
     </section>
 
@@ -38,6 +38,8 @@
                                 <button type="button"
                                     class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>
                                 <a href="/post/{{post.id}}">{{post.comments.length}}</a>
+                                <button type="button" onclick="location.href='/post/{{post.id}}'" class="likeButton icon is-medium fa-solid fa-trash is-rounded"></button>
+
                             </section>
                             <hr>
             </container>

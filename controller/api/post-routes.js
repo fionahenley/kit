@@ -6,12 +6,12 @@ const withAuth = require('../../utils/auth');
 // get all users
 router.get('/', (req, res) => {
     Post.findAll({
-        attributes: ['id', 'content', 'title', 'created_at', [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']],
+        attributes: ['id', 'content', 'title', 'created_at', 'user_id', [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']],
         order: [['created_at', 'DESC']],
         include: [
             {
                 model: User,
-                attributes: ['firstname', 'lastname']
+                attributes: ['firstname', 'lastname', 'user_id']
             }
         ],
         include: [
@@ -42,11 +42,11 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'content', 'title', 'created_at', [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']],
+        attributes: ['id', 'content', 'title', 'created_at', 'user_id', [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']],
         include: [
             {
                 model: User,
-                attributes: ['firstname', 'lastname']
+                attributes: ['firstname', 'lastname', 'user_id']
             }
         ],
         include: [
@@ -136,6 +136,12 @@ router.put('/likes', withAuth, (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
+    Comment.destroy({
+        where: {
+            post_id: req.params.id
+        }
+    })
+
     Post.destroy({
         where: {
             id: req.params.id

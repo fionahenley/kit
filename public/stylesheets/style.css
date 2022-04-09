@@ -120,12 +120,6 @@ body {
   background-color: #ccc;
 }
 
-.commentContainer {
-  border-bottom: 0.5px solid black;
-  float: right;
-  border-radius: 0.25;
-}
-
 .comments {
   font-weight: lighter;
   text-align: center;
@@ -233,7 +227,7 @@ body {
   margin: 0px 5px 0px 5px;
 }
 
-.fa-heart {
+.fa-heart, .fa-trash {
   color: #7258BF;
 }
 
@@ -248,7 +242,7 @@ body {
 }
 
 
-.fa-heart:hover {
+.fa-heart:hover, .fa-trash:hover {
   color: rgb(249, 154, 209);
 }
 
@@ -337,7 +331,7 @@ body {
 }
 
 .postContainer {
-  margin: 5px 0px 0px 12%;
+  margin: 5px 0px 0px 10%;
   padding: 5px 5px 5px 0px;
 }
 
@@ -391,6 +385,7 @@ body {
 .postDate {
   font-size: xx-small;
   font-weight: lighter;
+  padding-bottom: 2px;
 }
 
 .dashboardImage {
@@ -437,24 +432,28 @@ hr{
 
 /*  */
 .flex-container {
-  width: 50vw;
+  font-size: large;
+  width: 38vw;
   text-align: left;
   display: flex;
   flex-direction: row;
+  padding-bottom: 0%;
+  margin: 0;
 }
 
 .flex-left {
   width: 10%;
-  height: 10vh;
-  margin: 5px;
-  padding: 5px;
+  height: 6vh;
+  /* margin: 5px;
+  padding: 5px; */
   /* border: 2px solid red; */
 }
 
 .flex-right {
+  padding-top: 10px;
   width: 80%;
-  margin: 5px;
-  padding: 5px;
+  /* margin: 5px;
+  padding: 5px; */
   /* border: 2px solid green; */
 }
 
@@ -466,4 +465,63 @@ hr{
   display: inline-block;
   transform: rotate(45deg);
   width: 25px;
+}
+
+/* -------------------------------- COMMENTS -------------------------------- */
+.collapsible {
+  padding-left: 30px;
+  cursor: pointer;
+  width: 22%;
+  border:#7258BF solid 1px;
+  border-radius: 10px;
+  text-align: left;
+  outline: none;
+  font-size: 12px;
+  background-color: white;
+  opacity: .5;
+  margin-left: 70px;
+}
+
+.active,
+.collapsible:hover {
+  color: rgb(75, 75, 75);
+  opacity: 100%;
+}
+
+/* .commentContainer {
+  border-bottom: 0.5px solid rgb(75, 75, 75);;
+  float: right;
+  border-radius: 0.25;
+} */
+
+.comments {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-radius: 25px;
+}
+
+.collapsible:after {
+  content: "\02795";
+  font-size: 13px;
+  color: white;
+}
+
+.active:after {
+  content: "\2796";
+  padding-top: 3px;
+}
+/* 
+.commentDateAndTime {
+  display: flex;
+  flex-direction: row;
+} */
+
+.flex-left-home {
+  width: 75%;
+}
+
+.flex-right-home {
+  width: 25%;
 }

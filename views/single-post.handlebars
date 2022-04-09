@@ -1,41 +1,53 @@
 <div class="container commentMainBox">
   <article class="post">
     <div class="title"></div>
-      <p class="postedBy">Posted by: {{post.user.firstname}} {{post.user.lastname}}</p>
-      <p class="postTitle">Title: {{post.title}}</p>
-      <p class="postDate">{{post.created_at}}</p> <br>
+    <p class="postedBy">Posted by: {{post.user.firstname}} {{post.user.lastname}}</p>
+    <p class="postTitle">Title: {{post.title}}</p>
+    <p class="postDate">{{post.created_at}}</p> <br>
 
-        <q>{{post.content}}</q><br><br>
-  </div>
+    <q>{{post.content}}</q><br><br>
+  </article>
+</div>
 <form class="comment-form">
   <div class="container commentForm">
-    {{post.vote_count}}<button type="button" class="upvote-btn likeButton icon is-medium fa-solid fa-heart is-rounded"></button>
-    <textarea class="commentText" name="comment-body"></textarea><span><button class="commentBtn" type="submit">Post</button></span>
+    {{post.vote_count}}<button type="button"
+      class="upvote-btn likeButton icon is-medium fa-solid fa-heart is-rounded"></button>
+    <textarea class="commentText" name="comment-body"></textarea><span><button class="commentBtn"
+        type="submit">Post</button></span>
+    <button class="delete-post" type="button"> Delete </button>
+
   </div>
 </form>
+<p>session: {{session.firstname}}</p>
+<div>
+  <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+</div>
 
-  <div>
-    <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-  </div>
-</article>
 
-<div class="container comments commentsBox">
+<div class="container commentsBox">
   {{#each post.comments}}
   <section class="comment">
     <div class="meta">
       {{user.firstname}} {{user.lastname}}
-            <div class="commentBox">
-              <div class="text">
-                 {{comment_text}}
-</section>
-      
-
-  {{/each}}
+      <div class="commentBox">
+        <div class="text">
+          {{comment_text}}
+        </div>
       </div>
-
+    </div>
+  </section>
+  {{/each}}
 </div>
 
+<div id="deleteModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <span>Are you sure want to delete this Post?</span>
+    <button class="delete-btn" type="button"> Yes </button>
+  </div>
 </div>
+
 
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/upvote.js"></script>
+<script src="/javascript/delete-post.js"></script>
