@@ -4,7 +4,6 @@
 
 
 <form class="new-post-form">
-
   <container class="contentContainer">
     <container class="writePostContainer">
       <input class="homeTitleInputBox" type="text" id="new-post-title" placeholder="Title" />
@@ -22,14 +21,27 @@
 <!-- ------------- POST TEXT STARTS HERE ------------- -->
 
 
+
+
 <br><br>
 <container class="contentContainer ">
   <div class="commentContent">
     <ul>
       {{#each posts as |post|}}
-
       <li>
-        <h2 class="profileName">{{post.user.firstname}} {{post.user.lastname}}</h2> <p class="postDate">{{post.created_at}}</p>
+
+
+{{!--  --}}
+<div class="flex-container container">
+    <div class="flex-left">
+<img src="/assets/images/logo6.png" height="100px" width="100px" alt="kit_logo">
+    </div>
+    <div class="flex-right">
+          <p>{{post.user.firstname}} {{post.user.lastname}}</p>  
+          <p class="postDate">{{post.created_at}}</p>
+    </div>
+</div>
+{{!--  --}}
         <section class="container postContainer">
           <section class="writeCommentContainer">
             <p class="homePostTitle"> Title: {{post.title}}</p>

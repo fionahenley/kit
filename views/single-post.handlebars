@@ -1,9 +1,11 @@
 <div class="container commentMainBox">
   <article class="post">
     <div class="title"></div>
-      <p class="postTitle">Title: {{post.title}}</p><br>
+      <p class="postedBy">Posted by: {{post.user.firstname}} {{post.user.lastname}}</p>
+      <p class="postTitle">Title: {{post.title}}</p>
+      <p class="postDate">{{post.created_at}}</p> <br>
+
         <q>{{post.content}}</q><br><br>
-            <p class="postedBy">Posted by: {{post.user.firstname}} {{post.user.lastname}}</p><br><br>
   </div>
 <form class="comment-form">
   <div class="container commentForm">

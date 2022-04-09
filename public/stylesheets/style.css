@@ -188,7 +188,6 @@ body {
 }
 
 .postBtnContainer {
-  padding-left: 20px;
   display: flex;
   flex-direction: row;
   margin: 0%;
@@ -296,13 +295,16 @@ body {
 
 .commentMainBox {
   padding-left: 20px;
-  height: 200px;
+  height: 300px;
   width: 20em;
   margin-top: 70px;
   font: 1.8rem/1.4 Georgia, serif;
   font-style: italic;
   border: rgb(249, 247, 247) solid 1px;
-  border-radius: 0px 70px 15px 70px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+
 }
 
 .postTitle {
@@ -329,18 +331,19 @@ body {
 }
 
 .commentsBox {
+  margin-left: 15%;
   width: 500px;
   text-align: left;
 }
 
 .postContainer {
-  margin: 5px 0px 0px 0px;
+  margin: 5px 0px 0px 12%;
   padding: 5px 5px 5px 0px;
 }
 
 .likeIconContainer {
   width: 300px;
-  margin-top: 10px;
+  margin: 10px 0 0 10%;
   text-align: left;
   /* border: rgb(77, 5, 44) solid 1px;
   border-radius: 0px 20px 15px 20px;  */
@@ -430,4 +433,37 @@ hr{
   height: 1px;
   background-color: #ccc;
   border: none;
+}
+
+/*  */
+.flex-container {
+  width: 50vw;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-left {
+  width: 10%;
+  height: 10vh;
+  margin: 5px;
+  padding: 5px;
+  /* border: 2px solid red; */
+}
+
+.flex-right {
+  width: 80%;
+  margin: 5px;
+  padding: 5px;
+  /* border: 2px solid green; */
+}
+
+/*  */
+
+.close {
+  font-size: 45px;
+  font-weight: 600;
+  display: inline-block;
+  transform: rotate(45deg);
+  width: 25px;
 }
