@@ -231,7 +231,7 @@ body {
 /* right column flex */
 .dash-flex-right {
   width: 75%;
-  margin: 15px 0 0 5%;
+  margin: 15px 0 0 15%;
   padding: 5px;
 }
 
@@ -352,9 +352,32 @@ hr{
   width: 200px;
   /* border: #7258BF solid 1px;
   border-radius: 10px; */
-
 }
 
+/* ---------------------- END OF SINGLEPOST HANDLEBARS STYLING ------------------- */
 
+/* MEDIA QUERRIES */
+                    
+/* 1200px for DASHBOARD */                    
+    @media screen and (max-width: 1200px) {
+      .dash-flex-left {
+        display: none;
+      }
+      .dash-flex-right {
+        margin: 15% 0 0 4%;
+      }
+  }
 
+  /* 1200px for HOME */                    
+  @media screen and (max-width: 1200px) {
+    .home-post-container {
+      margin: 0% 0% 0% 5%;
+    }
+}
 
+  /* 1200px for SINGLE POST  */                    
+  @media screen and (max-width: 1200px) {
+    .singlePost {
+      margin: 25% 0% 0% 5%;
+    }
+}
