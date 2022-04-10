@@ -49,7 +49,7 @@ async function signupFormHandler(event) {
     });
 
     if (response.ok) {
-      window.location.replace('/home');
+      window.location.replace('/');
     } else {
       alert(response.statusText);
     }

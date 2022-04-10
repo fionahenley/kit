@@ -1,0 +1,56 @@
+            <section class="dash-post-container container singlePost">
+                <p class="dash-username">{{post.user.firstname}} {{post.user.lastname}}</p>
+                <p class="postDate">{{post.created_at}}</p>
+                <p class="homePostTitle"> Title: {{post.title}}</p>
+                <h5><i>"{{post.content}}"</i></h5>
+            </section>
+
+            <section class="singlePost-iconContainer">
+                  <button type="button" class="upvote-btn likeButton icon is-medium fa-solid fa-heart is-rounded"></button>&nbsp;
+                  {{post.vote_count}}
+                <button type="button"
+                    class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>&nbsp;
+                <a href="/post/{{post.id}}">{{post.comments.length}}</a>
+                <button type="button" class="delete-post likeButton icon is-medium fa-solid fa-trash is-rounded"></button> 
+            </section>
+        
+
+<div class="singlePost-comment">
+  {{#each post.comments}}
+  <section class="comment">
+    <div class="meta">
+      {{user.firstname}} {{user.lastname}}
+      <div class="commentBox">
+        <div class="text">
+          {{comment_text}}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{/each}}
+</div>
+
+
+
+<form class="comment-form">
+  <div class="commentForm">
+    <textarea class="commentText" name="comment-body" placeholder="Comment"></textarea>
+    <button class="commentBtn" type="submit">Post</button>
+    <button class="delete-post" type="button"> Delete </button>
+  </div>
+</form>
+
+
+{{!-- MODAL --}}
+<div id="deleteModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <span>Are you sure want to delete this Post?</span>
+    <button class="delete-btn modal-btn" type="button"> Yes </button>
+  </div>
+</div>
+
+
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
+<script src="/javascript/delete-post.js"></script>

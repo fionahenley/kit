@@ -1,6 +1,8 @@
 const router = require('express').Router();
-const { User, Post, Comment, Like } = require('../../model');
+const { stores } = require('sessions');
+const { User, Post, Like } = require('../../model');
 const withAuth = require('../../utils/auth');
+var sessionName = global.String;
 
 // GET /api/users
 router.get('/', (req, res) => {
@@ -108,7 +110,11 @@ router.post('/login', (req, res) => {
         req.session.save(() => {
             // declare session variables
             req.session.user_id = dbUserData.id;
-            req.session.username = dbUserData.username;
+            req.session.firstname = dbUserData.firstname;
+            req.session.lastname = dbUserData.lastname;
+            req.session.location = dbUserData.location;
+            req.session.bio = dbUserData.bio;
+            req.session.email = dbUserData.email;
             req.session.loggedIn = true;
             
             res.json({ user: dbUserData, message: 'You are now logged in!' });

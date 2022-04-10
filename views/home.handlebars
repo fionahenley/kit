@@ -1,173 +1,64 @@
-<div class="userProfileName">
-  <!-- ----------------- NAME ----------------- -->
-  <h1 class="title ml-5">Johnny Carpio</h1>
-  <!-- <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-                <div class="navbar-item has-dropdown is-hoverable"> -->
-  <!-- ----------------- MENU DROPDOWN ----------------- -->
-  <!-- <a class="navbar-link pl-5 mr-5">
-                  </a>
-                  <div class="navbar-dropdown">
-                    <a class="navbar-item" href="../home/home.html">
-                      HOME
-                    </a>
-                    <a class="navbar-item" href="../userProfie/profile.html">
-                        MY PROFILE
-                      </a>
-                    <a class="navbar-item" href="../about/about.html">
-                      ABOUT
-                    </a>
-                    <a class="navbar-item" href="../contact/contact.html">
-                        CONTACT
-                      </a>
-                  </div>
-                </div>
-              </nav> -->
+<div class="container homeImage">
+  <img src="/assets/images/logo6.png" height="100px" width="100px" alt="kit_logo">
 </div>
 
-<!-- ------------------------- IMAGE -------------------------- -->
-<container class="imgContaine level">
-  <img
-    src="../assets/images/2(2).png"
-    height="150px"
-    width="150px"
-    alt="user_img"
-  />
 
-  <!-- --------------------------- BIO --------------------------- -->
-  <div class="bioContent">
-    <p class="bio has-text-centered">
-      lorem ipsum dolor sit amet, consectetur adipisicing elit lorem ipsum dolor
-      sit amet, consectetur lorem ipsum dolor sit amet, consectetur adip isicing
-      elit lorem ipsum dolor sit ame et lorem
-    </p>
-  </div>
-</container>
-<!-- -------------------- EMAIL & LOCATION --------------------- -->
+<form class="new-post-form">
+  <section class="writePostContainer container">
+    <input class="homeTitleInputBox" type="text" id="new-post-title" placeholder="Title" />
+    <section class="postBtnContainer">
+      <input class="input postInput is-small is-rounded" id="new-post-content" type="text"
+        placeholder="What's happening?">
+      <button class="button postButton is-rounded" type="submit">Post</button>
 
-<container class="infoContainer">
-  <ol>
-    <li>
-      <i class="fa-regular fa-envelope"></i>
-      <a
-        class="contact"
-        href="mailto:Johnnycarpio04@gmail.com"
-      >Johnnycarpio04@gmail.com</a>
-    </li>
-    <li>
-      <i class="fa-solid fa-location-pin mr-2"></i>
-      Philippines
-    </li>
-  </ol>
-</container>
-<!-- -------------------------------- POST --------------------------------- -->
-<container class="contentContainer">
-  <container class="postContainer">
-    <div class="nameAndDate pt-3 pl-5">
-      <p class="is-uppercase is-size-4">
-        Johnny Carpio
-      </p>
-    </div>
+      {{!-- <button class="button postButton is-rounded">New Post</button> --}}
 
-    <div class="content pl-5 pr-5">
-      <p>
-        lorem ipsum dolor sit amet, consectetur adip proident, sed do eiusmod
-        tempor incidid id urna. Ut enim ad minim veniam, quis nost rata non
-        proident, sunt in culpa qui officia deser held at ver
-      </p>
-    </div>
+    </section>
+  </section>
+</form>
 
-    <container class="btnContainer pl-5 pr-5">
-      <input
-        class="input is-small is-rounded"
-        type="text"
-        placeholder="Comment"
-      />
-      <button class="button is-rounded is-small ml-1">Send</button>
-    </container>
+<!-- ------------- POST TEXT STARTS HERE ------------- -->
 
-    <container class="commentsContainer pt-3">
-      <p class="postDateAndTime pr-5">
-        3/03/22 6:04pm
-      </p>
-      <button
-        type="button"
-        class="collapsible button is small is-rounded level ml-5 pl-5"
-      >View comments</button>
+<br><br>
 
-      <!-- ------------------------------ COMMENTS ------------------------------- -->
-      <div class="comments">
-        <container class="commentContainer">
-          <p class="is-uppercase is-size-5 pt-3">
-            Christian Carandang
-          </p>
-          <p>
-            Lorem ipsum...lorem ipsum dolor sit lorem ipsum dolor sit amet,
-            consectetur adipisicing elit.
-          </p>
-          <div class="commentDateAndTime">
-            <p>
-              3/03/22
-            </p>
-            <p class="pl-3">
-              6:04pm
-            </p>
+<section class="contentContainer ">
+  <ul>
+    {{#each posts as |post|}}
+      <li>
+
+            <section class="home-post-container">
+                <p class="home-username">{{post.user.firstname}} {{post.user.lastname}}</p>
+                <p class="homePostTitle"> Title: {{post.title}}</p>
+                <h5>{{post.content}}</h5>
+                <p class="postDate">{{post.created_at}}</p>
+            </section>
+</section>
+
+        <section class="iconContainer">
+          <button type="button" onclick="location.href='/post/{{post.id}}'"
+            class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button>&nbsp;
+          <p>{{post.vote_count}}</p>
+          <button type="button" onclick="location.href='/post/{{post.id}}'"
+            class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>&nbsp;
+          <p>{{post.comments.length}}</p>
+          <button type="button" onclick="location.href='/post/{{post.id}}'"
+            class="likeButton icon is-medium fa-solid fa-trash is-rounded"></button>
+        </section>
+      </li>
+          <button class="collapsible">{{post.comments.length}} Comment(s)</button>
+          <div class="comments">
+            {{#each post.comments}}
+                <p class="comment-username">{{user.firstname}} {{user.lastname}}</p>
+                <p class="comment-content home-comment">{{comment_text}}</p>
+            {{/each}}
           </div>
-        </container>
+</section>
+<br>
+{{/each}}
+</ul>
 
-        <container class="commentContainer">
-          <p class="is-uppercase is-size-5 pt-3">
-            Kye Bader
-          </p>
-          <p>
-            Lorem ipsum...lorem ipsum dolor sit lorem ipsum dolor sit amet,
-            consectetur adipisicing elit.
-          </p>
-          <div class="commentDateAndTime">
-            <p>
-              3/03/22
-            </p>
-            <p class="pl-3">
-              6:04pm
-            </p>
-          </div>
-        </container>
-
-        <container class="commentContainer">
-          <p class="is-uppercase is-size-5 pt-3">
-            Fiona Henley
-          </p>
-          <p>
-            Lorem ipsum...lorem ipsum dolor sit lorem ipsum dolor sit amet,
-            consectetur adipisicing elit.
-          </p>
-          <div class="commentDateAndTime">
-            <p>
-              3/03/22
-            </p>
-            <p class="pl-3">
-              6:04pm
-            </p>
-          </div>
-        </container>
-
-        <container class="commentContainer">
-          <p class="is-uppercase is-size-5 pt-3">
-            Johnny Carpio
-          </p>
-          <p>
-            Lorem ipsum...lorem ipsum dolor sit lorem ipsum dolor sit amet,
-            consectetur adipisicing elit.
-          </p>
-          <div class="commentDateAndTime">
-            <p>
-              3/03/22
-            </p>
-            <p class="pl-3">
-              6:04pm
-            </p>
-          </div>
-        </container>
-      </div>
-    </container>
-  </container>
-</container>
+<script src="/javascript/new.js"></script>
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/viewCommentbtn.js"></script>

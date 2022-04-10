@@ -1,0 +1,71 @@
+<div class="dash-flex-container">
+
+
+{{!----------------------------- LEFT COLUMN ----------------------------------}}
+
+<div class="dash-flex-left">
+    {{!-- profile name and image --}}
+    <div class="homeImage">
+        <div class="profile-name">{{session.firstname}} {{session.lastname}}</div> <br>
+        <div class="profile-image"><img src="/assets/images/2(2).png" height="150px" width="150px" alt="kit_logo"></div>
+    </div>
+
+{{!-- bio --}}
+    <div class="bio">
+        <i class="fa-brands fa-github infoIcon"></i> {{session.firstname}} {{session.lastname}} <br>
+        <i class="fa-regular infoIcon fa-envelope"></i> {{session.email}} <br>
+        <i class="fa-solid infoIcon fa-location-pin"></i> {{session.location}} <br>
+        <i class="fa-solid infoIcon fa-male"></i> {{session.bio}}
+    </div>
+</div>
+{{!-------------------------- END OF LEFT COLUMN ----------------------------------}}
+
+
+{{!----------------------------- RIGHT COLUMN ----------------------------------}}
+
+{{!-- start of right column flex --}}
+<div class="dash-flex-right">
+    <ul>
+        {{#each posts as |post|}}
+        <li>
+            <section class="dash-post-container">
+                <p class="dash-username">{{post.user.firstname}} {{post.user.lastname}}</p>
+                <p class="postDate">{{post.created_at}}</p>
+                <p class="homePostTitle"> Title: {{post.title}}</p>
+                <h5><i>"{{post.content}}"</i></h5>
+            </section>
+
+            <section class="dash-iconContainer">
+                <button type="button" class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button>&nbsp;
+                <a href="/post/{{post.id}}">{{post.comments.length}}</a>
+                <button type="button"
+                    class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>&nbsp;
+                <a href="/post/{{post.id}}">{{post.comments.length}}</a>
+                <button type="button" onclick="location.href='/post/{{post.id}}'"
+                    class="likeButton icon is-medium fa-solid fa-trash is-rounded"></button>
+            </section>
+        </li>
+
+          <button class="collapsible dash-collapsible">{{post.comments.length}} Comment(s)</button>
+          <div class="comments dash-comment">
+            {{#each post.comments}}
+                <p class="comment-username">{{user.firstname}} {{user.lastname}}</p>
+                <p class="comment-content">{{comment_text}}</p>
+            {{/each}}
+          </div>
+        <hr>
+        {{/each}}
+    </ul>
+</div>
+</div>
+
+{{!----------------------------- END OF RIGHT COLUMN ----------------------------------}}
+
+<script src="/javascript/dashboard.js"></script>
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
+<script src="/javascript/viewCommentbtn.js"></script>
+
+
+
+

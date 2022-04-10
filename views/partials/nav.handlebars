@@ -1,16 +1,26 @@
 <header>
-    <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link pl-5 mr-5"></a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="../about/about.html">
-            ABOUT
-          </a>
-          <a class="navbar-item" href="../contact/contact.html">
-              CONTACT
-            </a>
-          <button id="logout" class="btn-no-style">logout</button>
+  <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link pl-5 mr-5"></a>
+
+      <div class="navbar-dropdown">
+        <div>
+        {{#if loggedIn}}<a href="/dashboard">PROFILE</a>
         </div>
+        {{/if}}
+        <div>
+        {{#if loggedIn}}<a href="/">HOME</a>
+        </div>
+        {{/if}}
+        <div>
+        <div>
+        {{#if loggedIn}}<a href="/contact">CONTACT</a>
+        </div>
+        {{/if}}
+        </div>
+
+        <button id="logout" class="btn-no-style">logout</button>
       </div>
-    </nav>
+    </div>
+  </nav>
 </header>

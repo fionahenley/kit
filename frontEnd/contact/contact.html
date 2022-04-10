@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta charset="UTF-8"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=PT+Sans&family=Raleway:wght@100&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <script src="https://kit.fontawesome.com/278bcfc599.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -13,16 +12,17 @@
     <title>Contact</title>
 </head>
 <body>
-  <!-- ------------------------------- HEADER -------------------------------- -->
-  <div class="wrapper">
+  <!-- ------------------------------- HEADER/NAV -------------------------------- -->
    <header>
     <div class="aboutContent">
-      <h1 class="title is-size-3">Contact</h1>
+      <h1 class="is-size-3">Contact</h1>
     </div>
     <div>
+      <!-- -------------------------------- LOGO --------------------------------- -->
       <img src="../assets/images/logoBlack.png" height="100px" width="100px" alt="kit_logo">
     </div>
     <nav>
+      <!-- ---------------------------- DROPDOWN MENU ---------------------------- --> 
     <div class="dropdown is-right is-hoverable">
       <div class="dropdown-trigger">
         <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
@@ -34,13 +34,16 @@
       <div class="dropdown-menu" id="dropdown-menu4" role="menu">
         <div class="dropdown-content">
           <div class="dropdown-item">
-            <a class="navbar-item" href="../home/home.html">HOME</a>
+            <input type="text" placeholder="Search" class="searchBar">
+        </div>
+          <div class="dropdown-item">
+            <a class="navbar-item" href="../home/home.html">Home</a>
           </div>
           <div class="dropdown-item">
-            <a class="navbar-item" href="../userProfie/profile.html">MY PROFILE</a>
+            <a class="navbar-item" href="../userProfie/profile.html">My Profile</a>
           </div>
           <div class="dropdown-item">
-            <a class="navbar-item" href="../about/about.html">ABOUT</a>
+            <a class="navbar-item" href="../about/about.html">About</a>
           </div>
         </div>
       </div>
@@ -120,8 +123,5 @@
       &copy;KIT 2022 
     </h3>  
   </footer>
-  </div>
-
-  
 </body>
 </html>
