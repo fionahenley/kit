@@ -381,3 +381,15 @@ hr{
       margin: 25% 0% 0% 5%;
     }
 }
+
+  /* 1200px for LOGIN/SIGNUP  */                    
+  @media screen and (max-width: 1200px) {
+    .welcome-login {
+      display: none;
+    }
+
+    .main {
+      margin: 20% 0 0 12%;
+    }
+}
+
