@@ -1,93 +1,64 @@
-<div class="flex-container">
-
-{{!-- left column --}}
-  <div class="flex-left-home">
-    <div class="container homeImage">
-      <img src="/assets/images/logo6.png" height="100px" width="100px" alt="kit_logo">
-    </div>
-  </div>
+<div class="container homeImage">
+  <img src="/assets/images/logo6.png" height="100px" width="100px" alt="kit_logo">
+</div>
 
 
-
-  <div class="flex-right-home">
 <form class="new-post-form">
-    <container class="writePostContainer">
-      <input class="homeTitleInputBox" type="text" id="new-post-title" placeholder="Title" />
-      <container class="postBtnContainer">
-        <input class="input postInput is-small is-rounded" id="new-post-content" type="text"
-          placeholder="What's happening?">
-        <button class="button postButton is-rounded" type="submit">Post</button>
+  <section class="writePostContainer container">
+    <input class="homeTitleInputBox" type="text" id="new-post-title" placeholder="Title" />
+    <section class="postBtnContainer">
+      <input class="input postInput is-small is-rounded" id="new-post-content" type="text"
+        placeholder="What's happening?">
+      <button class="button postButton is-rounded" type="submit">Post</button>
 
-        {{!-- <button class="button postButton is-rounded">New Post</button> --}}
+      {{!-- <button class="button postButton is-rounded">New Post</button> --}}
 
-    </container>
-  </container>
+    </section>
+  </section>
 </form>
 
 <!-- ------------- POST TEXT STARTS HERE ------------- -->
 
 <br><br>
-<container class="contentContainer ">
-  <div class="commentContent">
-    <ul>
-      {{#each posts as |post|}}
+
+<section class="contentContainer ">
+  <ul>
+    {{#each posts as |post|}}
       <li>
 
+            <section class="home-post-container">
+                <p class="home-username">{{post.user.firstname}} {{post.user.lastname}}</p>
+                <p class="homePostTitle"> Title: {{post.title}}</p>
+                <h5>{{post.content}}</h5>
+                <p class="postDate">{{post.created_at}}</p>
+            </section>
+</section>
 
-        {{!-- --}}
-        <div class="flex-container container">
-          <div class="flex-left">
-            <img src="/assets/images/logo6.png" height="100px" width="100px" alt="kit_logo">
-          </div>
-          <div class="flex-right">
-            <p>{{post.user.firstname}} {{post.user.lastname}}</p>
-            <p class="postDate">{{post.created_at}}</p>
-          </div>
-        </div>
-        {{!-- --}}
-        <section class="container postContainer">
-          <section class="writeCommentContainer">
-            <p class="homePostTitle"> Title: {{post.title}}</p>
-            <h5><i>"{{post.content}}"</i></h5>
-          </section>
-        </section>
-
-        <section class="postBtnContainer container likeIconContainer">
+        <section class="iconContainer">
           <button type="button" onclick="location.href='/post/{{post.id}}'"
-            class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button>
+            class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button>&nbsp;
           <p>{{post.vote_count}}</p>
           <button type="button" onclick="location.href='/post/{{post.id}}'"
-            class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>
+            class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>&nbsp;
+          <p>{{post.comments.length}}</p>
           <button type="button" onclick="location.href='/post/{{post.id}}'"
             class="likeButton icon is-medium fa-solid fa-trash is-rounded"></button>
         </section>
-        <button class="collapsible">{{post.comments.length}} Comment(s)</button>
-        <div class="container comments commentsBox">
-          {{#each post.comments}}
-          <section class="comment commentContainer">
-            <div class="meta">
-              {{user.firstname}} {{user.lastname}}
-              <div class="commentBox">
-                <div class="text">
-                  {{comment_text}}
-          </section>
-          {{/each}}
-        </div>
-
       </li>
-
-</container>
+          <button class="collapsible">{{post.comments.length}} Comment(s)</button>
+          <div class="comments">
+            {{#each post.comments}}
+                <p class="comment-username">{{user.firstname}} {{user.lastname}}</p>
+                <p class="comment-content">{{comment_text}}</p>
+            {{/each}}
+          </div>
+</section>
+<br>
 {{/each}}
 </ul>
-
-
-  </div>
 
 <script src="/javascript/new.js"></script>
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/upvote.js"></script>
 <script src="/javascript/delete-post.js"></script>
 <script src="/javascript/viewCommentbtn.js"></script>
-
-
-{{!-- {{post.comments.length}} comment(s) {{post.created_at}}</a> --}}

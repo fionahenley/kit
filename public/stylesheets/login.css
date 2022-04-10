@@ -1,6 +1,6 @@
 /* ------------------------------- BACKGROUND ------------------------------- */
 html {
-  /* background: url(../assets/images/clouds.jpeg) no-repeat center center fixed; */
+  background: url(../assets/images/clouds.jpeg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -51,10 +51,6 @@ header nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-li {
-  list-style: none;
 }
 
 header nav ul li {
@@ -170,7 +166,7 @@ button:hover{
   height: 600px;
   background:#6d44b8;
   border-radius: 70% / 0%;
-  transform: translateY(-30px);
+  transform: translateY(-20px);
   transition: .8s ease-in-out;
 }
 
