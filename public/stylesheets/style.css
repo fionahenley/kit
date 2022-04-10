@@ -221,6 +221,7 @@ body {
 
 /* left column flex */
 .dash-flex-left {
+  position:fixed;
   width: 25%;
   height: 100vh;
   margin: 5px;
@@ -231,7 +232,7 @@ body {
 /* right column flex */
 .dash-flex-right {
   width: 75%;
-  margin: 15px 0 0 15%;
+  margin: 15px 0 0 35%;
   padding: 5px;
 }
 

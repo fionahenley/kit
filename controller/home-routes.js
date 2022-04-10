@@ -4,6 +4,13 @@ const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../model');
 
 
+
+// router.get('/home', function(req, res) {
+//   res.render('/');
+// });
+
+
+
 router.get('/', withAuth, (req, res) => {
   Post.findAll({
     attributes: [
@@ -100,6 +107,8 @@ router.get('/login', (req, res) => {
 router.get('/dashboard/new', withAuth,(req, res) => {
   res.render('newPost', {loggedIn: req.session.loggedIn});
 });
+
+
 
 
 module.exports = router;

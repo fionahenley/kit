@@ -7,8 +7,16 @@
     {{!-- profile name and image --}}
     <div class="homeImage">
         <div class="profile-name">{{session.firstname}} {{session.lastname}}</div> <br>
-        <div class="profile-image"><img src="/assets/images/2(2).png" height="150px" width="150px" alt="kit_logo"></div>
+        {{!-- <div class="profile-image"><img src="/assets/images/2(2).png" height="150px" width="150px" alt="kit_logo"></div> --}}
     </div>
+
+    {{!-- Image Upload --}}
+<div class="dash-image-container">
+      <img src="" id="img-preview" />
+      <label class="dash-cam-icon file-upload-container" for="file-upload">
+        <input id="file-upload" type="file" style="display:none;"><i class="fa-solid fa-camera"></i></i></label>
+</div>
+
 
 {{!-- bio --}}
     <div class="bio">
@@ -60,6 +68,9 @@
 </div>
 
 {{!----------------------------- END OF RIGHT COLUMN ----------------------------------}}
+
+{{!-- {{> image}} --}}
+
 
 <script src="/javascript/dashboard.js"></script>
 <script src="/javascript/comment.js"></script>
