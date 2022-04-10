@@ -119,7 +119,7 @@ body {
   
     /* collapsible effect */
     .comments {
-      margin-left: 20%;
+      margin-left: 35%;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.2s ease-out;
@@ -356,30 +356,61 @@ hr{
 
 /* ---------------------- END OF SINGLEPOST HANDLEBARS STYLING ------------------- */
 
-/* MEDIA QUERRIES */
+/* ----------------------- MEDIA QUERRIES --------------------- */
+
+/* -------------------------- 1200px ---------------------------- */
                     
 /* 1200px for DASHBOARD */                    
     @media screen and (max-width: 1200px) {
+
       .dash-flex-left {
         display: none;
       }
+
       .dash-flex-right {
-        margin: 15% 0 0 4%;
+        margin: 15% 0 0 25%;
       }
+
+      .dash-collapsible {
+        margin: 1% 0 0 0%;
+      }
+
   }
 
   /* 1200px for HOME */                    
   @media screen and (max-width: 1200px) {
     .home-post-container {
-      margin: 0% 0% 0% 5%;
+      margin: 0% 0% 0% 20%;
+    }
+
+    .writePostContainer {
+      margin: 5% 0 0 20%;
+    }
+
+    .iconContainer {
+      margin: 0% 0 0 18%;
+    }
+
+    .collapsible {
+      margin: 1% 0 0 20%;
+    }
+
+    .comments {
+      margin: 1% 0 0 20%;
     }
 }
 
   /* 1200px for SINGLE POST  */                    
   @media screen and (max-width: 1200px) {
     .singlePost {
-      margin: 25% 0% 0% 5%;
+      margin: 25% 0% 0% 25%;
     }
+
+    .singlePost-iconContainer {
+      margin: 0% 0 0 23%;
+      width: 500px;
+    }
+
 }
 
   /* 1200px for LOGIN/SIGNUP  */                    
@@ -393,3 +424,102 @@ hr{
     }
 }
 
+/* -------------------------- 980px ---------------------------- */
+
+  /* 980 for HOME */                    
+  @media screen and (max-width: 980px) {
+    .home-post-container {
+      margin: 0% 0% 0% 20%;
+    }
+  }
+
+
+    /* 980px for LOGIN/SIGNUP  */                    
+    @media screen and (max-width: 980px) {
+      .welcome-login {
+        display: none;
+      }
+  
+      .main {
+        margin: 20% 0 0 50%;
+      }
+  }
+
+    /* 980px for DASHBOARD  */                    
+    @media screen and (max-width: 980px) {
+    .dash-flex-left {
+      display: none;
+    }
+    .dash-flex-right {
+      margin: 15% 0 0 25%;
+    }
+
+    .dash-collapsible {
+      margin:0% 0 0 3%;
+    }
+
+    .dash-comment {
+      margin: 0%;
+    }
+  
+}
+
+/* -------------------------- 575px ---------------------------- */
+
+
+  /* 575 for HOME */                    
+  @media screen and (max-width: 575px) {
+
+    .home-post-container {
+      margin: 0% 0% 0% 10%;
+    }
+
+     .writePostContainer {
+      margin: 10% 0 0 1%;
+    }
+
+    .iconContainer {
+      margin: 0% 0 0 5%;
+    }
+
+    .collapsible {
+      margin: 2% 0 0 8%;
+    }
+
+    .comments {
+      margin: 1% 0 0 8%;
+    } 
+
+}
+
+  /* 575px for DASHBOARD */                    
+  @media screen and (max-width: 575px) {
+    .dash-flex-left {
+      display: none;
+    }
+
+    .dash-flex-right {
+      margin: 15% 0 0 10%;
+    }
+
+    .dash-collapsible {
+      margin: 1% 0 0 0%;
+    }
+
+    .dash-post-container {
+      width: 480px;
+    }
+
+}
+
+  /* 575px for LOGIN/SIGNUP */                    
+  @media screen and (max-width: 575px) {
+    .welcome-login {
+      display: none;
+    }
+
+    .main {
+      margin: 20% 0 0 25%;
+    }
+}
+    
