@@ -1,77 +1,64 @@
-
-<div class="homeImage">
-<img src="/assets/images/logo6.png" height="175px" width="175px" alt="kit_logo">
+<div class="container homeImage">
+  <img src="/assets/images/logo6.png" height="100px" width="100px" alt="kit_logo">
 </div>
 
 
 <form class="new-post-form">
-  <container class="contentContainer">
-    <container class="writePostContainer">
-      <input class="homeTitleInputBox" type="text" id="new-post-title" placeholder="Title" />
-      <container class="postBtnContainer">
-        <input class="input postInput is-small is-rounded" id="new-post-content" type="text"
-          placeholder="What's happening?">
-        <button class="button postButton is-rounded" type="submit">Post</button>
+  <section class="writePostContainer container">
+    <input class="homeTitleInputBox" type="text" id="new-post-title" placeholder="Title" />
+    <section class="postBtnContainer">
+      <input class="input postInput is-small is-rounded" id="new-post-content" type="text"
+        placeholder="What's happening?">
+      <button class="button postButton is-rounded" type="submit">Post</button>
 
-        {{!-- <button class="button postButton is-rounded">New Post</button> --}}
-      </container>
-    </container>
-  </container>
+      {{!-- <button class="button postButton is-rounded">New Post</button> --}}
+
+    </section>
+  </section>
 </form>
 
 <!-- ------------- POST TEXT STARTS HERE ------------- -->
 
-
 <br><br>
 
-
-
-<container class="contentContainer ">
-  <div class="commentContent">
-    <ul>
-      {{#each posts as |post|}}
-
+<section class="contentContainer ">
+  <ul>
+    {{#each posts as |post|}}
       <li>
-        <h2 class="profileName">{{post.user.firstname}} {{post.user.lastname}}</h2> <p class="postDate">{{post.created_at}}</p>
-        <section class="container postContainer">
-          <section class="writeCommentContainer">
-            <p class="homePostTitle"> Title: {{post.title}}</p>
-            <h5><i>"{{post.content}}"</i></h5>
-          </section>
-        </section>
 
-        <section class="postBtnContainer container likeIconContainer">
-              <button type="button" class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button><a href="/post/{{post.id}}">{{post.vote_count}}</a>
-              <button type="button" class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>
-              <a href="/post/{{post.id}}">{{post.comments.length}}</a>
-          </section>
-          <br>
-
-<div class="container comments commentsBox">
-  {{#each post.comments}}
-  <section class="comment">
-    <div class="meta usersComment">
-      {{user.firstname}} {{user.lastname}}
-            <div class="commentBox">
-              <div class="text">
-                 {{comment_text}}
+            <section class="home-post-container">
+                <p class="home-username">{{post.user.firstname}} {{post.user.lastname}}</p>
+                <p class="homePostTitle"> Title: {{post.title}}</p>
+                <h5>{{post.content}}</h5>
+                <p class="postDate">{{post.created_at}}</p>
+            </section>
 </section>
-          {{/each}}
-        </div>
+
+        <section class="iconContainer">
+          <button type="button" onclick="location.href='/post/{{post.id}}'"
+            class="likeButton icon is-medium fa-solid fa-heart is-rounded"></button>&nbsp;
+          <p>{{post.vote_count}}</p>
+          <button type="button" onclick="location.href='/post/{{post.id}}'"
+            class="likeButton icon is-medium fa-solid fa-comments fa-comments is-rounded"></button>&nbsp;
+          <p>{{post.comments.length}}</p>
+          <button type="button" onclick="location.href='/post/{{post.id}}'"
+            class="likeButton icon is-medium fa-solid fa-trash is-rounded"></button>
+        </section>
       </li>
-<hr>
-</container>
+          <button class="collapsible">{{post.comments.length}} Comment(s)</button>
+          <div class="comments">
+            {{#each post.comments}}
+                <p class="comment-username">{{user.firstname}} {{user.lastname}}</p>
+                <p class="comment-content home-comment">{{comment_text}}</p>
+            {{/each}}
+          </div>
+</section>
+<br>
 {{/each}}
 </ul>
-
-
-
-
-
-
 
 <script src="/javascript/new.js"></script>
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/upvote.js"></script>
-
-{{!-- {{post.comments.length}} comment(s) {{post.created_at}}</a> --}}
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/viewCommentbtn.js"></script>

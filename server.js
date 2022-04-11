@@ -5,6 +5,16 @@ const app = express();
 const path = require('path');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const axios = require('axios');
+const cloudinary = require('cloudinary');
+
+
+cloudinary.config({ 
+  cloud_name: 'dpaqcyphy', 
+  api_key: '822137363676168', 
+  api_secret: '9zK41UrSebpoW9Ldjymz5QFgs8U' 
+});
+
 
 const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);

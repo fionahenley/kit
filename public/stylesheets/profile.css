@@ -222,3 +222,41 @@ h3 {
   color: rgb(75, 75, 75);
 }
 
+.flex-container-profile {
+  display: flex;
+}
+
+.dash-profile {
+  padding: 25px 50px 0px 25px;
+  margin-top: 5%;
+  width: 25vw;
+  /* height: 100px;
+  border: #573b8a solid 2px; */
+}
+
+.main-profile {
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 50vw;
+}
+
+
+
+.homeImage {
+  width: 50vw;
+  /* border: rgb(77, 5, 44) solid 1px; */
+  border-radius: 0px 20px 15px 20px; 
+}
+
+.profile-name {
+  margin-left: 7%;
+  font-size: 35px;
+}
+
+.bio {
+  margin-top: 5%;
+  margin-left: 15%;
+  font-size: medium;
+  font-weight: lighter;
+}
+

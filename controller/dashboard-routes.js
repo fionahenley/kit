@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
         // use the ID from the session
         user_id: req.session.user_id
       },
+      
       attributes: [
         'id',
         'title',
@@ -40,4 +41,5 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
       });
   });
+
 module.exports = router;

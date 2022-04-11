@@ -6,233 +6,190 @@ body {
   background-size: cover;
 }
 
-  /* SIGNUP/LOGIN PAGE  */
-
-  .loginContainer{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Jost', sans-serif;
-    background: url(../assets/images/clouds.jpeg) no-repeat center center fixed;
-  }
-  .main{
-    width: 350px;
-    height: 600px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 5px 20px 50px #000;
-  }
-  #chk{
-    display: none;
-  }
-  .signup{
-    position: relative;
-    width:100%;
-    height: 100%;
-  }
-  label{
-    color: #fff;
-    font-size: 2.3em;
-    justify-content: center;
-    display: flex;
-    margin: 60px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .5s ease-in-out;
-  }
-  input{
-    width: 60%;
-    height: 20px;
-    background: #e0dede;
-    justify-content: center;
-    display: flex;
-    padding: 12px 10px;
-    margin: 20px auto;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-  }
-  button{
-    width: 60%;
-    height: 40px;
-    margin: 10px auto;
-    justify-content: center;
-    display: block;
-    color: #fff;
-    background: #573b8a;
-    font-size: 1em;
-    font-weight: bold;
-    margin-top: 20px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    transition: .2s ease-in;
-    cursor: pointer;
-  }
-  button:hover{
-    background: #6d44b8;
-  }
-  .login{
-    height: 600px;
-    background: #eee;
-    border-radius: 70% / 10%;
-    transform: translateY(-30px);
-    transition: .8s ease-in-out;
-  }
-
-  .login label{
-    color: #573b8a;
-    transform: scale(.6);
-    margin-bottom: 10px;
-  }
-
-  #login-img {
-margin-left: 75px;  }
-  
-  #chk:checked ~ .login{
-    transform: translateY(-420px);
-  }
-  #chk:checked ~ .login label{
-    transform: scale(1);	
-  }
-  #chk:checked ~ .signup label{
-    transform: scale(.6);
-  }
-
-  /* ---------------------------------- PROFILE INFORMATION ---------------------------------- */
-.userProfileName{
-  padding: 20px;
-}
-
-.infoContainer {
-  margin-left: 20px;
-}
-
-.title {
-  color: rgb(75, 75, 75);
-  padding-left: 25px;
-  padding-top: 20px;
-}
-
-img {
-  margin-left: 75px;
-}
-
-.imgContainer {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  justify-content: space-after;
-  align-items: center;
-}
-
-.field {
-  opacity: 0.1;
-}
-
-.info a {
-  color: rgb(75, 75, 75);
-  font-size: 15px;
-}
+  /* ---------------------------------- HOME.HANDLEBARS STYLING ---------------------------------- */
 
 
-/* ----------------------------------- BIO ---------------------------------- */
-
-.bioContent {
-  width: 600px;
-  margin-right: 230px;
-  margin-left: 50px;
-  margin-top: 50px;
-}
-
-.bio {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.bioConent {
-  display: flex;
-  flex-basis: 70%;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-}
-
-/* .bioContainer {
+/* container of the post */
+.home-post-container {
   display: flex;
   flex-direction: column;
-  position: relative;
-  padding-right: 300px;
-} */
-
-/* ---------------------------------- POSTS --------------------------------- */
-.contentContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.postContainer {
-  display: flex;
-  flex-direction: column;
-  border: 0.5px solid white;
   width: 500px;
+  margin-left: 35%;
   padding-bottom: 5px;
   border-radius: 15px;
-  margin-top: 50px;
-}
-
-.btnContainer {
   display: flex;
-  justify-content: center;
-}
-
-.button {
+  flex-direction: column;
   border: none;
-  opacity: 0.5;
+  width: 550px;
 }
 
-.button:hover {
-  background-color: #ccc;
-}
-
-.postDateAndTime {
-  float: right;
-}
-
-/* -------------------------------- COMMENTS -------------------------------- */
-.collapsible {
-  cursor: pointer;
-  width: 30%;
+/* Home Page - Write a post container */
+.writePostContainer {
+  display: flex;
+  flex-direction: column;
   border: none;
+  width: 600px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  border-radius: 15px;
+   border: 0.5px solid rgb(245, 244, 244);
+}
+
+/* This is where you type the title of the post in the homepage */
+.homeTitleInputBox {
   text-align: left;
-  outline: none;
-  font-size: 12px;
-  color: black;
+  width: 300px;
+  padding: 18px;
+  border-radius: 20px;
+  background-color: white;
+  margin: 0px 0px 0px 22px;
 }
+
+/* This is the Post Button in the home page */
+.postButton {
+  margin-left: 20px;
+  margin-right: 35px;
+  width: 100px;
+  background-color: #7258BF;
+  border: none;
+  color: white;
+}
+
+/* Home Page "What's happening" input */
+.postInput {
+  margin-left: 24px;
+  max-width: 400px;
+  padding: 17px;
+  border: #7258BF solid 1px;
+}
+ 
+  /* name appears on top of the post */
+  .home-username {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+/* Title of the post */
+.homePostTitle {
+  margin-left: 0%;
+  font-size: small;
+  margin-bottom: 5px;
+}
+
+  /* ICONS (like, comment and trash) CONTAINER */
+  .iconContainer {
+    margin-left: 34%;
+    margin-bottom: 15px;
+    width: 20vw;
+    display: flex;
+    flex-direction:row;
+  }
+
+  
+  /* COLLAPSIBLE for comments */
+  .collapsible {
+    cursor: pointer;
+    width: 180px;
+    height: 25px;
+    border:#7258BF solid 1px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0%;
+    margin: 5px 5px 0px 35%;
+    font-size: 12px;
+    background-color: white;
+    opacity: .5;
+    color: black;
+  }
+
+  .dash-collapsible {
+    cursor: pointer;
+    width: 180px;
+    height: 25px;
+    border:#7258BF solid 1px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0%;
+    margin: 5px 5px 0px 20px;
+    font-size: 12px;
+    background-color: white;
+    opacity: .5;
+    color: black;
+  }
+  
+    /* collapsible effect */
+    .comments {
+      margin-left: 35%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+
+  /* Date of the post created appeared at the bottom of the post */
+  .postDate {
+    margin: 5px 0px 15px 0px;
+    font-size: x-small;
+    font-weight: bold;
+  }
+  
+  /* This is the box where the comment shows after expanding the collapsible bar */
+  .commentBox {
+    margin-left: 25%;
+    width: 500px;
+    text-align: left;
+    font-weight: lighter;
+    text-align: left;
+  } 
+
+  /* This is the name of the user appears before the comment inside the collapsible bar */
+  .comment-username {
+      margin: 5px 0 0 15px;
+      font-weight: bold;
+      font-size: 12px;
+  }
+
+  /* This is the comment inside the collapsible bar */
+  .comment-content {
+    width: 200px;
+    margin: 5px 0 0 50px;
+    padding: 5px 0 0 5px;
+    font-weight: bold;
+    font-size: 12px;
+    border: #7258BF solid 1px;
+    border-radius: 0px 30px 30px 30px;
+}
+
+/* These are the round icon (heart, comment and trash) background */
+  .likeButton {
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+    margin: 0px 0px 0px 25px;
+  }
+  
+  .fa-heart, .fa-trash {
+    color: #7258BF;
+  }
+  
+  .fa-comments {
+    color: #7258BF;
+    margin-left: 25px;
+    margin-top: 0%
+  }
+  
+  .fa-comments:hover {
+    color: rgb(249, 154, 209);
+  }
+  
+  .fa-heart:hover, .fa-trash:hover {
+    color: rgb(249, 154, 209);
+  }
+
+/* HOME COMMENTS SECTION */
 
 .active,
 .collapsible:hover {
-  background-color: #ccc;
-}
-
-.commentContainer {
-  border-bottom: 0.5px solid black;
-  float: right;
-  border-radius: 0.25;
-}
-
-.comments {
-  font-weight: lighter;
-  text-align: center;
-  /* background-color: white; */
-  /* max-height: 0; */
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  /* border-radius: 25px; */
+  background-color: white;
 }
 
 .commentsContainer {
@@ -250,149 +207,234 @@ img {
   padding-top: 3px;
 }
 
-.commentDateAndTime {
+
+/* ----------------- END OF HOME.HANDLEBARS STYLING --------------------- */
+
+/* -------------- START OF DASHBOARD.HANDLEBARS STYLING ----------------- */
+
+/* main flex container */
+.dash-flex-container {
   display: flex;
   flex-direction: row;
+  margin-top: 5%;
 }
 
-/* Write a post container styling STARTS here */
-.writePostContainer {
-  display: flex;
-  flex-direction: column;
-  border: none;
-  width: 700px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  border-radius: 15px;
-   border: 0.5px solid rgb(245, 244, 244);
+/* left column flex */
+.dash-flex-left {
+  position:fixed;
+  width: 25%;
+  height: 100vh;
+  margin: 5px;
+  padding: 5px;
+  /* border: 2px solid red; */
 }
 
-.postInput {
-  max-width: 500px;
-  padding: 20px;
-}
- 
-.postButton {
-  margin-left: 20px;
-  margin-right: 35px;
-  width: 100px;
-  background-color: #7258BF;
-  border: none;
-  color: white;
+/* right column flex */
+.dash-flex-right {
+  width: 75%;
+  margin: 15px 0 0 35%;
+  padding: 5px;
 }
 
-.postButton:hover {
-  background-color: white;
-  color: #7258BF;
-}
-
-.postBtnContainer {
-  padding-left: 20px;
-  display: flex;
-  flex-direction: row;
-  margin: 0%;
-}
-/* Write a post container styling ENDS here */
-
-
-
-/* This the post text */
-.postName {
+/* This is the name of the user on top of the profile image inside the dashboard handlebars */
+.profile-name {
+  text-align: center;
   font-family: "Raleway", sans-serif;
-  font-weight: bold;
-}
-
-/* This is the button next to the comment input */
-.btnContainer {
-  padding-left: 20px;
-}
-
-.commentInput {
-  max-width: 100%;
-  margin: 10px;
-}
-
-.send {
-  margin: 10px;
-  width: 100px;
-  color: black;
-  border: none;
-  opacity: 0.5;
-}
-
-.send:hover {
-  background-color: white;
-  color:rgb(75, 75, 75);
-  opacity: 1.0;
-}
-
-.likeButton {
-  border: none;
-  border-radius: 25px;
-  background-color: white;
-  margin: 0px 5px 0px 5px;
-}
-
-.fa-heart {
-  color: #7258BF;
-}
-
-.fa-comments {
-  color: #7258BF;
-  margin-left: 25px;
-  margin-top: 0%
-}
-
-.fa-comments:hover {
-  color: rgb(249, 154, 209);
-}
-
-
-.fa-heart:hover {
-  color: rgb(249, 154, 209);
-}
-
-/* writeCommentContainer */
-
-.writeCommentContainer {
-  display: flex;
-  flex-direction: column;
-  border: none;
-  width: 800px;
-  width: 450px;
-  padding-left: 10px;
-}
-
-.commentInput {
-  max-width: 500px;
-}
-
-.commentButton {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 0%;
-  width: 100px;
-  background-color: #7258BF;
-  border: none;
-  color: white;
-}
-
-.profileName {
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: lighter;
+  font-size: 40px;
   color: rgb(80, 73, 73);
   margin-top: 10px;
 }
 
-.postTitle {
+.dash-username {
+  /* text-align: center; */
   font-family: "Raleway", sans-serif;
-  font-style: italic;
-  font-size: 12px;
+  font-weight: lighter;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(80, 73, 73);
+  margin-top: 10px;
 }
 
-/* CARDS */
 
+/* dashboard profile image */
+.profile-image {
+  text-align: center
+}
+
+/* dashboard bio (Name, Email, Location and Bio info) */
+.bio {
+  width: 80%;
+  text-align: left;
+  font-size: 15px;
+  font-weight: lighter;
+  margin: 15px 0 0 32%;
+}
+
+/* This is the main container of all the feed inside the dashboard */
+.dash-post-content {
+  margin: 0% 0 0 10%;
+}
+
+.dash-post-container {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding-bottom: 5px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  width: 550px;
+}
+
+.dash-iconContainer {
+  margin: 10px 0 15px 0;
+  width: 20vw;
+  display: flex;
+  flex-direction:row;
+}
+
+
+hr{
+  height: 2px;
+  background-color: white;
+  border: none;
+  width: 550px;
+}
+
+/* ---------------- END OF DASHBOARD.HANDLEBARS STYLING ----------------- */
+
+/* -------------- START OF SINGLE-POST.HANDLEBARS STYLING ----------------- */
+
+.modal {
+  margin: 5% 0% 0% 9%;
+}
+
+.modal-btn {
+  width: 50px;
+}
+
+/* This is the delete/post button inside the single-post handlebars */
+.delete-post, .commentBtn {
+  width: 10%;
+  margin: 1% 0 0 34% ;
+}
+
+.commentText{
+  padding: 7px;
+  width: 25%;
+  height: 35px;
+  margin: 1% 0 0 34%;
+  border: #7258BF solid 1px;
+  border-radius: 10px;
+}
+
+.singlePost {
+  margin-top: 10%;
+}
+
+.singlePost-iconContainer {
+  margin: 10px 0 0px 33%;
+  width: 20vw;
+  display: flex;
+  flex-direction:row;
+}
+
+.singlePostContainer {
+  width: 600px;
+  background-color: white;
+  border: #7258BF solid 1px;
+  border-radius: 10px;
+}
+
+.singlePost-comment {
+  margin: 2% 0 2% 34%;
+  width: 200px;
+  /* border: #7258BF solid 1px;
+  border-radius: 10px; */
+}
+
+/* ---------------------- END OF SINGLEPOST HANDLEBARS STYLING ------------------- */
+
+/* ----------------------- MEDIA QUERRIES --------------------- */
+
+/* -------------------------- 1200px ---------------------------- */
+                    
+/* 1200px for DASHBOARD */                    
+    @media screen and (max-width: 1200px) {
+
+      .dash-flex-left {
+        display: none;
+      }
+
+      .dash-flex-right {
+        margin: 15% 0 0 25%;
+      }
+
+      .dash-collapsible {
+        margin: 1% 0 0 0%;
+      }
+
+  }
+
+  /* 1200px for HOME */                    
+  @media screen and (max-width: 1200px) {
+    .home-post-container {
+      margin: 0% 0% 0% 20%;
+    }
+
+    .writePostContainer {
+      margin: 5% 0 0 20%;
+    }
+
+    .iconContainer {
+      margin: 0% 0 0 18%;
+    }
+
+    .collapsible {
+      margin: 1% 0 0 20%;
+    }
+
+    .comments {
+      margin: 1% 0 0 20%;
+    }
+}
+
+  /* 1200px for SINGLE POST  */                    
+  @media screen and (max-width: 1200px) {
+    .singlePost {
+      margin: 25% 0% 0% 25%;
+    }
+
+    .singlePost-iconContainer {
+      margin: 0% 0 0 23%;
+      width: 500px;
+    }
+
+}
+
+  /* 1200px for LOGIN/SIGNUP  */                    
+  @media screen and (max-width: 1200px) {
+    .welcome-login {
+      display: none;
+    }
+
+    .main {
+      margin: 20% 0 0 12%;
+    }
+}
+
+/* -------------------------- 980px ---------------------------- */
+
+  /* 980 for HOME */                    
+  @media screen and (max-width: 980px) {
+    .home-post-container {
+      margin: 0% 0% 0% 20%;
+    }
+  }
+
+<<<<<<< HEAD
 .commentMainBox {
   padding-left: 20px;
   height: 200px;
@@ -403,22 +445,42 @@ img {
   border: rgb(249, 247, 247) solid 1px;
   border-radius: 0px 70px 15px 70px;
 }
+=======
+>>>>>>> feature/cloudinary
 
-.postTitle {
-  font-size: 20px;
-  font-style: normal;
+    /* 980px for LOGIN/SIGNUP  */                    
+    @media screen and (max-width: 980px) {
+      .welcome-login {
+        display: none;
+      }
+  
+      .main {
+        margin: 20% 0 0 50%;
+      }
+  }
+
+    /* 980px for DASHBOARD  */                    
+    @media screen and (max-width: 980px) {
+    .dash-flex-left {
+      display: none;
+    }
+    .dash-flex-right {
+      margin: 15% 0 0 25%;
+    }
+
+    .dash-collapsible {
+      margin:0% 0 0 3%;
+    }
+
+    .dash-comment {
+      margin: 0%;
+    }
+  
 }
 
-.commentBtn {
-  width: 60px;
-  margin: 0%;
-}
+/* -------------------------- 575px ---------------------------- */
 
-.commentForm {
-  width: 20em;
-  margin-top: 20px;
-}
-
+<<<<<<< HEAD
 .commentBox {
   padding: 10px;
   margin: 10px 0px 10px 25px;
@@ -426,44 +488,44 @@ img {
   border: rgb(129, 24, 94) solid 1px;
   border-radius: 0px 20px 15px 20px; 
 }
+=======
+>>>>>>> feature/cloudinary
 
-.commentsBox {
-  width: 500px;
-  text-align: left;
-}
+  /* 575 for HOME */                    
+  @media screen and (max-width: 575px) {
 
-.postContainer {
-  margin: 5px 0px 0px 0px;
-  padding: 5px 5px 5px 0px;
-}
+    .home-post-container {
+      margin: 0% 0% 0% 10%;
+    }
 
-.likeIconContainer {
-  width: 300px;
-  margin-top: 10px;
-  text-align: left;
-  /* border: rgb(77, 5, 44) solid 1px;
-  border-radius: 0px 20px 15px 20px;  */
-}
+     .writePostContainer {
+      margin: 10% 0 0 1%;
+    }
 
+<<<<<<< HEAD
 .homeCommentBox {
   margin-top: 15px;
   width: 500px;
   text-align: left;
   border: rgb(185, 73, 182) solid 1px;
   border-radius: 0px 20px 15px 20px; 
+=======
+    .iconContainer {
+      margin: 0% 0 0 5%;
+    }
+>>>>>>> feature/cloudinary
+
+    .collapsible {
+      margin: 2% 0 0 8%;
+    }
+
+    .comments {
+      margin: 1% 0 0 8%;
+    } 
 
 }
 
-.commentName {
-  font-family: 'Jost', sans-serif;
-  font-weight: bold;
-}
-
-.homeCommentContent {
-  font-style: italic;
-  padding-left: 10px;
-}
-
+<<<<<<< HEAD
 .homeTitleInputBox {
   text-align: left;
   width: 300px;
@@ -472,37 +534,47 @@ img {
   background-color: white;
   margin: 0px 0px 0px 35px;
 }
+=======
+  /* 575px for DASHBOARD */                    
+  @media screen and (max-width: 575px) {
+    .dash-flex-left {
+      display: none;
+    }
+>>>>>>> feature/cloudinary
 
-.homePostTitle {
-  font-size: small;
+    .dash-flex-right {
+      margin: 15% 0 0 10%;
+    }
+
+    .dash-collapsible {
+      margin: 1% 0 0 0%;
+    }
+
+    .dash-post-container {
+      width: 480px;
+    }
+
 }
 
-/* Dashboard */
-
-.bioContainer {
-    border: rgb(77, 5, 44) solid 1px;
-  border-radius: 0px 20px 15px 20px; 
-}
-
-.postDate {
-  font-size: xx-small;
-  font-weight: lighter;
-}
-
+<<<<<<< HEAD
 .homeImage {
   width: 100vw;
   /* border: rgb(77, 5, 44) solid 1px; */
   border-radius: 0px 20px 15px 20px; 
 }
+=======
+  /* 575px for LOGIN/SIGNUP */                    
+  @media screen and (max-width: 575px) {
+    .welcome-login {
+      display: none;
+    }
+>>>>>>> feature/cloudinary
 
-.dashboardImage {
-  display: flex;
-  justify-content:space-between;
-  width: 300px;
-  /* border: rgb(77, 5, 44) solid 1px;
-  border-radius: 0px 20px 15px 20px;
-  text-align: center; */
+    .main {
+      margin: 20% 0 0 25%;
+    }
 }
+<<<<<<< HEAD
 
 .headerLogo {
   margin: 0%;
@@ -537,3 +609,6 @@ hr{
   border: none;
 }
 
+=======
+    
+>>>>>>> feature/cloudinary
