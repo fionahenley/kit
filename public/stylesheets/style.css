@@ -5,10 +5,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-
   /* ---------------------------------- HOME.HANDLEBARS STYLING ---------------------------------- */
-
-
 /* container of the post */
 .home-post-container {
   display: flex;
@@ -22,7 +19,6 @@ body {
   border: none;
   width: 550px;
 }
-
 /* Home Page - Write a post container */
 .writePostContainer {
   display: flex;
@@ -34,7 +30,6 @@ body {
   border-radius: 15px;
    border: 0.5px solid rgb(245, 244, 244);
 }
-
 /* This is where you type the title of the post in the homepage */
 .homeTitleInputBox {
   text-align: left;
@@ -44,7 +39,6 @@ body {
   background-color: white;
   margin: 0px 0px 0px 22px;
 }
-
 /* This is the Post Button in the home page */
 .postButton {
   margin-left: 20px;
@@ -53,8 +47,8 @@ body {
   background-color: #7258BF;
   border: none;
   color: white;
+  opacity: 1;
 }
-
 /* Home Page "What's happening" input */
 .postInput {
   margin-left: 24px;
@@ -62,20 +56,17 @@ body {
   padding: 17px;
   border: #7258BF solid 1px;
 }
- 
   /* name appears on top of the post */
   .home-username {
     font-size: 25px;
     margin-bottom: 10px;
   }
-  
 /* Title of the post */
 .homePostTitle {
   margin-left: 0%;
   font-size: small;
   margin-bottom: 5px;
 }
-
   /* ICONS (like, comment and trash) CONTAINER */
   .iconContainer {
     margin-left: 34%;
@@ -84,8 +75,6 @@ body {
     display: flex;
     flex-direction:row;
   }
-
-  
   /* COLLAPSIBLE for comments */
   .collapsible {
     cursor: pointer;
@@ -101,7 +90,6 @@ body {
     opacity: .5;
     color: black;
   }
-
   .dash-collapsible {
     cursor: pointer;
     width: 180px;
@@ -116,7 +104,6 @@ body {
     opacity: .5;
     color: black;
   }
-  
     /* collapsible effect */
     .comments {
       margin-left: 35%;
@@ -125,13 +112,15 @@ body {
       transition: max-height 0.2s ease-out;
     }
 
+    .dash-comment {
+      margin-left: 0;
+    }
   /* Date of the post created appeared at the bottom of the post */
   .postDate {
     margin: 5px 0px 15px 0px;
     font-size: x-small;
     font-weight: bold;
   }
-  
   /* This is the box where the comment shows after expanding the collapsible bar */
   .commentBox {
     margin-left: 25%;
@@ -139,15 +128,13 @@ body {
     text-align: left;
     font-weight: lighter;
     text-align: left;
-  } 
-
+  }
   /* This is the name of the user appears before the comment inside the collapsible bar */
   .comment-username {
       margin: 5px 0 0 15px;
       font-weight: bold;
       font-size: 12px;
   }
-
   /* This is the comment inside the collapsible bar */
   .comment-content {
     width: 200px;
@@ -158,7 +145,6 @@ body {
     border: #7258BF solid 1px;
     border-radius: 0px 30px 30px 30px;
 }
-
 /* These are the round icon (heart, comment and trash) background */
   .likeButton {
     border: none;
@@ -166,59 +152,45 @@ body {
     background-color: white;
     margin: 0px 0px 0px 25px;
   }
-  
   .fa-heart, .fa-trash {
     color: #7258BF;
   }
-  
   .fa-comments {
     color: #7258BF;
     margin-left: 25px;
     margin-top: 0%
   }
-  
   .fa-comments:hover {
     color: rgb(249, 154, 209);
   }
-  
   .fa-heart:hover, .fa-trash:hover {
     color: rgb(249, 154, 209);
   }
-
 /* HOME COMMENTS SECTION */
-
 .active,
 .collapsible:hover {
   background-color: white;
 }
-
 .commentsContainer {
   opacity: 0.5;
 }
-
 .collapsible:after {
   content: "\02795";
   font-size: 13px;
   color: white;
 }
-
 .active:after {
   content: "\2796";
   padding-top: 3px;
 }
-
-
 /* ----------------- END OF HOME.HANDLEBARS STYLING --------------------- */
-
 /* -------------- START OF DASHBOARD.HANDLEBARS STYLING ----------------- */
-
 /* main flex container */
 .dash-flex-container {
   display: flex;
   flex-direction: row;
   margin-top: 5%;
 }
-
 /* left column flex */
 .dash-flex-left {
   position:fixed;
@@ -228,14 +200,12 @@ body {
   padding: 5px;
   /* border: 2px solid red; */
 }
-
 /* right column flex */
 .dash-flex-right {
   width: 75%;
   margin: 15px 0 0 35%;
   padding: 5px;
 }
-
 /* This is the name of the user on top of the profile image inside the dashboard handlebars */
 .profile-name {
   text-align: center;
@@ -245,7 +215,6 @@ body {
   color: rgb(80, 73, 73);
   margin-top: 10px;
 }
-
 .dash-username {
   /* text-align: center; */
   font-family: "Raleway", sans-serif;
@@ -255,13 +224,10 @@ body {
   color: rgb(80, 73, 73);
   margin-top: 10px;
 }
-
-
 /* dashboard profile image */
 .profile-image {
   text-align: center
 }
-
 /* dashboard bio (Name, Email, Location and Bio info) */
 .bio {
   width: 80%;
@@ -270,12 +236,10 @@ body {
   font-weight: lighter;
   margin: 15px 0 0 32%;
 }
-
 /* This is the main container of all the feed inside the dashboard */
 .dash-post-content {
   margin: 0% 0 0 10%;
 }
-
 .dash-post-container {
   display: flex;
   flex-direction: column;
@@ -287,40 +251,31 @@ body {
   border: none;
   width: 550px;
 }
-
 .dash-iconContainer {
   margin: 10px 0 15px 0;
   width: 20vw;
   display: flex;
   flex-direction:row;
 }
-
-
 hr{
   height: 2px;
   background-color: white;
   border: none;
   width: 550px;
 }
-
 /* ---------------- END OF DASHBOARD.HANDLEBARS STYLING ----------------- */
-
 /* -------------- START OF SINGLE-POST.HANDLEBARS STYLING ----------------- */
-
 .modal {
   margin: 5% 0% 0% 9%;
 }
-
 .modal-btn {
   width: 50px;
 }
-
 /* This is the delete/post button inside the single-post handlebars */
 .delete-post, .commentBtn {
   width: 10%;
   margin: 1% 0 0 34% ;
 }
-
 .commentText{
   padding: 7px;
   width: 25%;
@@ -329,25 +284,21 @@ hr{
   border: #7258BF solid 1px;
   border-radius: 10px;
 }
-
 .singlePost {
   margin-top: 10%;
 }
-
 .singlePost-iconContainer {
   margin: 10px 0 0px 33%;
   width: 20vw;
   display: flex;
   flex-direction:row;
 }
-
 .singlePostContainer {
   width: 600px;
   background-color: white;
   border: #7258BF solid 1px;
   border-radius: 10px;
 }
-
 .singlePost-comment {
   margin: 2% 0 2% 34%;
   width: 200px;
@@ -355,111 +306,87 @@ hr{
   border-radius: 10px; */
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  color: rgb(75,75,75);
+  left: 50%;
+}
+
+/* .comments {
+  margin: 0%, 20%, 0%, 0%; */
+
 /* ---------------------- END OF SINGLEPOST HANDLEBARS STYLING ------------------- */
-
 /* ----------------------- MEDIA QUERRIES --------------------- */
-
 /* -------------------------- 1200px ---------------------------- */
-                    
-/* 1200px for DASHBOARD */                    
+/* 1200px for DASHBOARD */
     @media screen and (max-width: 1200px) {
-
       .dash-flex-left {
         display: none;
       }
-
       .dash-flex-right {
         margin: 15% 0 0 25%;
       }
-
       .dash-collapsible {
         margin: 1% 0 0 0%;
       }
-
   }
-
-  /* 1200px for HOME */                    
+  /* 1200px for HOME */
   @media screen and (max-width: 1200px) {
     .home-post-container {
       margin: 0% 0% 0% 20%;
     }
-
     .writePostContainer {
       margin: 5% 0 0 20%;
     }
-
     .iconContainer {
       margin: 0% 0 0 18%;
     }
-
     .collapsible {
       margin: 1% 0 0 20%;
     }
-
     .comments {
       margin: 1% 0 0 20%;
     }
 }
-
-  /* 1200px for SINGLE POST  */                    
+  /* 1200px for SINGLE POST  */
   @media screen and (max-width: 1200px) {
     .singlePost {
       margin: 25% 0% 0% 25%;
     }
-
     .singlePost-iconContainer {
       margin: 0% 0 0 23%;
       width: 500px;
     }
-
 }
-
-  /* 1200px for LOGIN/SIGNUP  */                    
+  /* 1200px for LOGIN/SIGNUP  */
   @media screen and (max-width: 1200px) {
     .welcome-login {
       display: none;
     }
-
     .main {
       margin: 20% 0 0 12%;
     }
 }
-
 /* -------------------------- 980px ---------------------------- */
-
-  /* 980 for HOME */                    
+  /* 980 for HOME */
   @media screen and (max-width: 980px) {
     .home-post-container {
       margin: 0% 0% 0% 20%;
     }
   }
-
-<<<<<<< HEAD
-.commentMainBox {
-  padding-left: 20px;
-  height: 200px;
-  width: 20em;
-  margin-top: 70px;
-  font: 1.8rem/1.4 Georgia, serif;
-  font-style: italic;
-  border: rgb(249, 247, 247) solid 1px;
-  border-radius: 0px 70px 15px 70px;
-}
-=======
->>>>>>> feature/cloudinary
-
-    /* 980px for LOGIN/SIGNUP  */                    
+    /* 980px for LOGIN/SIGNUP  */
     @media screen and (max-width: 980px) {
       .welcome-login {
         display: none;
       }
-  
       .main {
         margin: 20% 0 0 50%;
       }
   }
-
-    /* 980px for DASHBOARD  */                    
+    /* 980px for DASHBOARD  */
     @media screen and (max-width: 980px) {
     .dash-flex-left {
       display: none;
@@ -467,148 +394,53 @@ hr{
     .dash-flex-right {
       margin: 15% 0 0 25%;
     }
-
     .dash-collapsible {
       margin:0% 0 0 3%;
     }
-
     .dash-comment {
-      margin: 0%;
+      margin: 0%
     }
-  
 }
-
 /* -------------------------- 575px ---------------------------- */
-
-<<<<<<< HEAD
-.commentBox {
-  padding: 10px;
-  margin: 10px 0px 10px 25px;
-  width: 26em;
-  border: rgb(129, 24, 94) solid 1px;
-  border-radius: 0px 20px 15px 20px; 
-}
-=======
->>>>>>> feature/cloudinary
-
-  /* 575 for HOME */                    
+  /* 575 for HOME */
   @media screen and (max-width: 575px) {
-
     .home-post-container {
       margin: 0% 0% 0% 10%;
     }
-
      .writePostContainer {
       margin: 10% 0 0 1%;
     }
-
-<<<<<<< HEAD
-.homeCommentBox {
-  margin-top: 15px;
-  width: 500px;
-  text-align: left;
-  border: rgb(185, 73, 182) solid 1px;
-  border-radius: 0px 20px 15px 20px; 
-=======
     .iconContainer {
       margin: 0% 0 0 5%;
     }
->>>>>>> feature/cloudinary
-
     .collapsible {
       margin: 2% 0 0 8%;
     }
-
     .comments {
       margin: 1% 0 0 8%;
-    } 
-
+    }
 }
-
-<<<<<<< HEAD
-.homeTitleInputBox {
-  text-align: left;
-  width: 300px;
-  padding: 18px;
-  border-radius: 20px;
-  background-color: white;
-  margin: 0px 0px 0px 35px;
-}
-=======
-  /* 575px for DASHBOARD */                    
+  /* 575px for DASHBOARD */
   @media screen and (max-width: 575px) {
     .dash-flex-left {
       display: none;
     }
->>>>>>> feature/cloudinary
-
     .dash-flex-right {
       margin: 15% 0 0 10%;
     }
-
     .dash-collapsible {
       margin: 1% 0 0 0%;
     }
-
     .dash-post-container {
       width: 480px;
     }
-
 }
-
-<<<<<<< HEAD
-.homeImage {
-  width: 100vw;
-  /* border: rgb(77, 5, 44) solid 1px; */
-  border-radius: 0px 20px 15px 20px; 
-}
-=======
-  /* 575px for LOGIN/SIGNUP */                    
+  /* 575px for LOGIN/SIGNUP */
   @media screen and (max-width: 575px) {
     .welcome-login {
       display: none;
     }
->>>>>>> feature/cloudinary
-
     .main {
       margin: 20% 0 0 25%;
     }
 }
-<<<<<<< HEAD
-
-.headerLogo {
-  margin: 0%;
-}
-
-.postedBy {
-  font-style: normal;
-  font-size: medium;
-}
-
-.postedByContainer {
-  width: 600px;
-  height: 20px;
-}
-
-.dashProfileInfo {
-  color: #573b8a;
-  width: 500px;
-  justify-content: space-around;
-}
-
-.commentText {
-  width: 400px;
-  border-radius: 15px;
-  padding-top: 10px;
-  padding-left: 10px;
-}
-
-hr{
-  height: 1px;
-  background-color: #ccc;
-  border: none;
-}
-
-=======
-    
->>>>>>> feature/cloudinary
