@@ -61,7 +61,6 @@ header nav ul li {
 .button {
   border: none;
   opacity: 0.3;
-  /* background-color: #D4E9FF; */
 }
 p .button {
   color: rgb(75, 75, 75);
@@ -97,7 +96,7 @@ p .button:hover {
   height: 100%; 
 }
 label{
-  color:#6d44b8;
+  color:#7258bf;
   font-size: 2.3em;
   justify-content: center;
   display: flex;
@@ -114,7 +113,7 @@ input{
   display: flex;
   padding: 12px 10px;
   margin: 20px auto;
-  border: #6D44B8 solid 1px;
+  border: #7258bf solid 1px;
   outline: none;
   border-radius: 5px;
 }
@@ -125,7 +124,7 @@ button{
   justify-content: center;
   display: block;
   color: #fff;
-  background:#6d44b8;
+  background:#7258bf;
   font-size: 1em;
   font-weight: bold;
   margin-top: 20px;
@@ -136,11 +135,11 @@ button{
   cursor: pointer;
 }
 button:hover{
-  background: #6D44B8;
+  background: #7258bf;
 }
 .login{
   height: 600px;
-  background:#6d44b8;
+  background:#7258bf;
   border-radius: 70% / 0%;
   transform: translateY(-20px);
   transition: .8s ease-in-out;
@@ -151,7 +150,7 @@ button:hover{
   margin: 10px auto;
   justify-content: center;
   display: block;
-  color:#573b8a;
+  color:#7258bf;
   background: white;
   font-size: 1em;
   font-weight: bold;
@@ -162,39 +161,45 @@ button:hover{
   transition: .2s ease-in;
   cursor: pointer;
 }
+
  login button:hover{
   background: white;
 }
+
 .login label{
   color: white;
   transform: scale(.6);
   margin-bottom: 10px;
 }
+
 #chk:checked ~ .login{
   transform: translateY(-420px);
 }
+
 #chk:checked ~ .login label{
   transform: scale(1);	
 }
+
 #chk:checked ~ .signup label{
   transform: scale(.6);
 }
+
 .flex-container-login {
   display: flex;
   flex-direction: row;
 }
+
 .welcome-login {
   margin-left: 15%;
   margin-top: 8%;
   width: 50vw;
   height: 100px;
   font-weight: bold;
-  /* border: #573B8A solid 2px; */
 }
+
 .sidebar-login {
   margin-left: 5%;
   margin-top: 5%;
   width: 50vw;
   height: 100px;
-  /* border: #573B8A solid 2px; */
 }
