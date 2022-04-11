@@ -6,13 +6,17 @@ const path = require('path');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const axios = require('axios');
-const cloudinary = require('cloudinary');
+const cloudinary = require('cloudinary').v2;
+// require.apply('dotenv').config
+
+// console.log(cloudinary.config().cloud_name);
+
 
 
 cloudinary.config({ 
-  cloud_name: 'dpaqcyphy', 
-  api_key: '822137363676168', 
-  api_secret: '9zK41UrSebpoW9Ldjymz5QFgs8U' 
+  cloud_name: process.env.NAME, 
+  api_key: process.env.KEY, 
+  api_secret: process.env.SECRET
 });
 
 
