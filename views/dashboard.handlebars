@@ -12,7 +12,8 @@
 
     {{!-- Image Upload --}}
 <div class="dash-image-container">
-      <img src="" id="img-preview" />
+<input id="userId" type="hidden" value="{{session.user_id}}">
+<img src="{{session.user_image}}" id="img-preview" />
       <label class="dash-cam-icon file-upload-container" for="file-upload">
         <input id="file-upload" type="file" style="display:none;"><i class="fa-solid fa-camera"></i></i></label>
 </div>
