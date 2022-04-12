@@ -72,6 +72,6 @@ None
 <img width="1437" alt="screen_shot_2022-04-10_at_10 45 34_pm" src="https://user-images.githubusercontent.com/94667410/162672871-e65c1e6e-7be8-4a17-82a4-9daec21ce261.png">
 
 ## Current Limitations
-  Uploading an image to your profile as a profile picture may take some time, please allow the app to upload the image before you leave the page.
-  After having uploaded an image, in only begins to persist after you've logged out and logged back in as it is tied to the session.
+  Uploading an image to your profile as a profile picture may take some time, please allow the app to upload the image before you leave the page. <br>
+  After having uploaded an image, in only begins to persist after you've logged out and logged back in as it is tied to the session. <br>
   The information for user bio is tied to session and behaves the same as the image.
