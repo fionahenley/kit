@@ -7,11 +7,6 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const axios = require('axios');
 const cloudinary = require('cloudinary').v2;
-// require.apply('dotenv').config
-
-// console.log(cloudinary.config().cloud_name);
-
-
 
 cloudinary.config({ 
   cloud_name: process.env.NAME, 
