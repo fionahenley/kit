@@ -100,19 +100,19 @@ router.post('/login', (req, res) => {
             return;
         }
 
-        // const validPassword = dbUserData.checkPassword(req.body.password);
-        // if (!validPassword) {
-        //     res.statusMessage = 'Incorrect password!';
-        //     res.status(400).json({ message: 'Incorrect password!' });
-        //     return;
-        // }       
+        const validPassword = dbUserData.checkPassword(req.body.password);
+        if (!validPassword) {
+            res.statusMessage = 'Incorrect password!';
+            res.status(400).json({ message: 'Incorrect password!' });
+            return;
+        }       
 
         req.session.save(() => {
             // declare session variables
             req.session.user_id = dbUserData.id;
             req.session.firstname = dbUserData.firstname;
             req.session.lastname = dbUserData.lastname;
-            req.session.user_image = dbUserData.user_image;
+            // req.session.user_image = dbUserData.user_image;
             req.session.location = dbUserData.location;
             req.session.bio = dbUserData.bio;
             req.session.email = dbUserData.email;
@@ -178,21 +178,21 @@ router.delete('/:id', withAuth, (req, res) => {
         });
 });
 
-router.put('/users/:userId', withAuth, (req, res) => {
-    User.update(
-        { user_image: req.body.user_image },
-        { where: { id: req.params.userId } }
-      )
-        .success(result =>
-          handleResult(result)
-        )
-        .error(err =>
-          handleError(err)
-        )
-        req.session.save(() => {
-            req.session.user_image = dbUserData.user_image;
-        });
-      return;
-   });
+// router.put('/users/:userId', withAuth, (req, res) => {
+//     User.update(
+//         { user_image: req.body.user_image },
+//         { where: { id: req.params.userId } }
+//       )
+//         .success(result =>
+//           handleResult(result)
+//         )
+//         .error(err =>
+//           handleError(err)
+//         )
+//         req.session.save(() => {
+//             req.session.user_image = dbUserData.user_image;
+//         });
+//       return;
+//    });
 
 module.exports = router;

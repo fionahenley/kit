@@ -62,10 +62,10 @@ User.init(
                 len: [4]
             }
         },
-        user_image: {
-            type: DataTypes.TEXT,
-            allowNull: false
-        },
+        // user_image: {
+        //     type: DataTypes.TEXT,
+        //     allowNull: true,
+        // },
     },
     {
         hooks: {
